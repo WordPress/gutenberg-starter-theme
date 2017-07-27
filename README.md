@@ -1,2 +1,2 @@
-# gutenberg-theme
+#gutenberg-theme
 Showcasing Gutenberg.
