@@ -73,7 +73,7 @@ add_action( 'after_setup_theme', 'gutenbergtheme_content_width', 0 );
  * Register Google Fonts
  */
 function gutenbergtheme_fonts_url() {
-    $fonts_url = '';
+  $fonts_url = '';
 
     /* Translators: If there are characters in your language that are not
 	 * supported by Karla, translate this to 'off'. Do not translate
@@ -83,7 +83,7 @@ function gutenbergtheme_fonts_url() {
 
 	if ( 'off' !== $notoserif ) {
 		$font_families = array();
-		$font_families[] = 'Noto+Serif:400,400italic,700,700italic';
+		$font_families[] = 'Noto Serif:400,400italic,700,700italic';
 
 		$query_args = array(
 			'family' => urlencode( implode( '|', $font_families ) ),
@@ -102,8 +102,8 @@ function gutenbergtheme_fonts_url() {
  */
 function gutenbergtheme_scripts() {
 	wp_enqueue_style( 'gutenbergtheme-style', get_stylesheet_uri() );
-
-	wp_enqueue_style( 'gutenbergtheme-style', get_stylesheet_uri() . get_template_directory_uri() . 'blocks.css');
+	
+	wp_enqueue_style( 'gutenbergtheme-blocks', get_theme_file_uri( '/blocks.css' ), array( 'gutenbergtheme-style' ), '1.0' );
 
 	wp_enqueue_style( 'gutenbergtheme-fonts', gutenbergtheme_fonts_url(), array(), null );
 
