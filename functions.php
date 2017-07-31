@@ -53,6 +53,10 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 			'gallery',
 			'caption',
 		) );
+
+		add_theme_support( 'gutenberg', array(
+			'wide-images' => true,
+		) );
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
