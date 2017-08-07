@@ -512,7 +512,6 @@ a:hover, a:active {
 .site-main .comment-navigation, .site-main
 .posts-navigation, .site-main
 .post-navigation {
-  margin: 0 0 1.5em;
   overflow: hidden;
 }
 
@@ -646,8 +645,13 @@ a:hover, a:active {
   text-align: center;
 }
 
+.site-content,
 .site-footer {
   padding: 60px 0;
+}
+
+.site-footer{
+  opacity: 0.5;
 }
 
 /*--------------------------------------------------------------
@@ -674,6 +678,20 @@ a:hover, a:active {
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
+}
+
+.entry-header,
+.entry-footer,
+.site-info,
+.post-navigation,
+.page-navigation,
+.comments-area {
+  margin: 1.5em auto;
+  max-width: 700px;
+}
+
+.entry-footer span{
+  margin-right: 1em;
 }
 
 /*--------------------------------------------------------------
