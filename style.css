@@ -490,7 +490,7 @@ textarea {
 ## Links
 --------------------------------------------------------------*/
 a {
-  color: #0073AA;
+  color: #0073aa;
 }
 
 a:visited {
@@ -498,7 +498,7 @@ a:visited {
 }
 
 a:hover, a:focus, a:active {
-  color: #00A0D2;
+  color: #00a0d2;
 }
 
 a:focus {

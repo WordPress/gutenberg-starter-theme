@@ -57,8 +57,8 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		add_theme_support( 'gutenberg', array(
 			'wide-images' => true,
    		'colors' => array(
-				'#a156b4',
-				'#d0a5db',
+				'#0073aa',
+				'#229fd8',
 				'#eee',
 				'#444',
 			),
