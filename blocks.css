@@ -6,6 +6,7 @@
 .wp-block-image,
 .wp-block-gallery,
 .wp-block-quote,
+.wp-block-text-columns,
 ul,
 ol,
 .wp-block-cover-text{
@@ -20,14 +21,16 @@ ol,
 
 .wp-block-cover-text.alignwide,
 .wp-block-image.alignwide,
-.wp-block-gallery.alignwide{
+.wp-block-gallery.alignwide,
+.wp-block-text-columns.alignwide{
   margin: 1.5em auto;
   max-width: 1100px;
 }
 
 .wp-block-cover-text.alignfull,
 .wp-block-image.alignfull,
-.wp-block-gallery.alignfull{
+.wp-block-gallery.alignfull,
+..wp-block-text-columns.alignfull{
   margin: 1.5em 0;
   max-width: 100%;
 }
