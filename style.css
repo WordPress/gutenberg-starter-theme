@@ -347,7 +347,7 @@ body {
 blockquote, q {
   quotes: "" ""; }
   blockquote:before, blockquote:after, q:before, q:after {
-    content: ""; }
+	content: ""; }
 
 hr {
   background-color: #ccc;
@@ -814,4 +814,8 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+.wp-block-embed {
+	text-align: center;
 }
