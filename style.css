@@ -819,3 +819,7 @@ object {
 .wp-block-embed {
 	text-align: center;
 }
+
+.wp-block-embed .twitter-tweet-rendered { 
+	margin:0 auto;
+}
