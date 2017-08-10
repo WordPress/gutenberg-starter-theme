@@ -14,11 +14,6 @@ ol,
   max-width: 700px;
 }
 
-.wp-block-gallery{
-  /* remove hacky-mc-hackface when can */
-  margin-right: auto!important;
-}
-
 .wp-block-cover-text.alignwide,
 .wp-block-image.alignwide,
 .wp-block-gallery.alignwide,
