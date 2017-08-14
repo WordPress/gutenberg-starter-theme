@@ -25,7 +25,7 @@ ol,
 .wp-block-cover-text.alignfull,
 .wp-block-image.alignfull,
 .wp-block-gallery.alignfull,
-..wp-block-text-columns.alignfull{
+.wp-block-text-columns.alignfull{
   margin: 1.5em 0;
   max-width: 100%;
 }

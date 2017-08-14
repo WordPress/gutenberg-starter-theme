@@ -28,6 +28,7 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Forms
 # Navigation
 	## Links
+	## Menus
 # Accessibility
 # Alignments
 # Clearings
@@ -275,11 +276,10 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .entry-header h1.entry-title {
-  font-size: 72px;
+  font-size: 50px;
   margin-bottom: 60px;
   margin-top: 60px;
   margin-top: 60px;
-  text-align: center;
 }
 
 dfn, cite, em, i {
@@ -326,6 +326,35 @@ big {
   font-size: 125%;
 }
 
+.archive .site-header {
+	margin-bottom: 3.5em;
+}
+
+.site-title {
+	margin: .4375em 0 0;
+	font-size: 38px;
+	font-weight: bold;
+	line-height: 1.2;
+	color: #333332;
+}
+
+.site-title a {
+	text-decoration: none;
+	color: inherit;
+}
+
+.site-branding {
+	margin-bottom: 1.75em;
+}
+
+.site-description {
+	margin: .4375em 0 0;
+	font-size: 17px;
+	font-weight: inherit;
+	line-height: 1.4;
+	word-wrap: break-word;
+	color: #929292;
+}
 /*--------------------------------------------------------------
 # Elements
 --------------------------------------------------------------*/
@@ -529,6 +558,84 @@ a:hover, a:active {
   text-align: right;
   width: 50%;
 }
+/*--------------------------------------------------------------
+## Menus
+--------------------------------------------------------------*/
+.main-navigation {
+	display: block;
+	clear: both;
+	max-width: 700px;
+	margin: 60px auto;
+	font-size: 17px;
+	font-weight: 700;
+	text-align: center;
+}
+.main-navigation a {
+	display: block;
+	padding: .20875em .4375em;
+	text-decoration: none;
+	-webkit-transition: color 140ms ease-in-out;
+	transition: color 140ms ease-in-out;
+}
+.main-navigation ul {
+	display: none;
+	margin: 0;
+	padding-left: 0;
+	list-style: none;
+}
+.main-navigation li {
+	border-top: 1px solid #ccc;
+	position: relative;
+	display: inline-block;
+	margin-top: .4375em;
+	padding-top: .4375em;
+	line-height: 1.3;
+	width: 100%;
+}
+.main-navigation ul:first-child > li:first-child {
+	border-top: 0;
+}
+.main-navigation li.current-menu-item > a,
+.main-navigation li.current_page_item > a {
+	color: #00aadc;
+}
+
+/* Small menu. */
+.menu-toggle,
+.main-navigation.toggled ul {
+	display: block;
+}
+
+@media screen and (min-width: 37.5em) {
+	.menu-toggle {
+		display: none;
+	}
+	.main-navigation ul {
+		display: block;
+	}
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+	margin: 0 0 1.5em;
+	overflow: hidden;
+}
+
+.comment-navigation .nav-previous,
+.posts-navigation .nav-previous,
+.post-navigation .nav-previous {
+	float: left;
+	width: 50%;
+}
+
+.comment-navigation .nav-next,
+.posts-navigation .nav-next,
+.post-navigation .nav-next {
+	float: right;
+	text-align: right;
+	width: 50%;
+}
 
 /*--------------------------------------------------------------
 # Accessibility
@@ -641,8 +748,9 @@ a:hover, a:active {
   max-width: 100%;
 }
 
-.site-branding {
+.site-branding{
   text-align: center;
+  margin: 60px 0;
 }
 
 .site-content,
