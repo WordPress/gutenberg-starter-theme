@@ -41,7 +41,7 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'theme' ),
@@ -119,6 +119,8 @@ function gutenbergtheme_scripts() {
 	wp_enqueue_style( 'gutenbergtheme-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/blocks.css');
+
+	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/overrides.css');
 
 	wp_enqueue_style( 'gutenbergtheme-fonts', gutenbergtheme_fonts_url(), array(), null );
 
