@@ -268,18 +268,19 @@ textarea {
   font-family: "Noto Serif", serif;
   font-size: 16px;
   font-size: 1rem;
-  line-height: 1.5;
+  line-height: 1.8;
 }
 
 h1, h2, h3, h4, h5, h6 {
+  color: #32373c;
   clear: both;
 }
 
 .entry-header h1.entry-title {
-  font-size: 50px;
-  margin-bottom: 60px;
-  margin-top: 60px;
-  margin-top: 60px;
+  font-size: 32px;
+  font-size: 2rem;
+  line-height: 1.4;
+  margin: 1em 0;
 }
 
 dfn, cite, em, i {
@@ -748,17 +749,13 @@ a:hover, a:active {
   max-width: 100%;
 }
 
-.site-branding{
+.site-branding {
   text-align: center;
   margin: 60px 0;
 }
 
-.site-content,
 .site-footer {
-  padding: 60px 0;
-}
-
-.site-footer{
+  margin: 1em 0;
   opacity: 0.5;
 }
 
