@@ -3,6 +3,8 @@
 .entry-content h2,
 .entry-content h3,
 .entry-content h4,
+.entry-content h5,
+.entry-content h6,
 .wp-block-image,
 .wp-block-gallery,
 .wp-block-video,
@@ -10,7 +12,8 @@
 .wp-block-text-columns,
 ul,
 ol,
-.wp-block-cover-text{
+.wp-block-cover-text,
+.wp-block-button {
   margin: 1.5em auto;
   max-width: 700px;
 }
@@ -33,4 +36,10 @@ ol,
 .wp-block-text-columns.alignfull{
   margin: 1.5em 0;
   max-width: 100%;
+}
+
+.wp-block-button.aligncenter {
+	display: block;
+	margin:0 auto;
+	text-align: center;
 }
