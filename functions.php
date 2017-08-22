@@ -7,6 +7,10 @@
  * @package Gutenbergtheme
  */
 
+if ( ! defined( 'WPORGPATH' ) ) {
+	define( 'WPORGPATH', get_theme_file_path( '/inc/' ) );
+}
+
 if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
