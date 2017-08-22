@@ -1,9 +1,9 @@
 /*
-Theme Name: gutenbergtheme
-Theme URI:
-Author:
-Author URI:
-Description: Description
+Theme Name: Gutenberg
+Theme URI: https://github.com/WordPress/gutenberg-theme/
+Author: wordpressdotorg
+Author URI: https://wordpress.org
+Description: Showcasing themeing with Gutenberg.
 Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: LICENSE
@@ -40,6 +40,8 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 # Media
 	## Captions
 	## Galleries
+# WP.org Header
+# WP.org Overrides
 --------------------------------------------------------------*/
 /*--------------------------------------------------------------
 # Normalize
@@ -919,4 +921,94 @@ object {
 
 .gallery-caption {
   display: block;
+}
+
+
+/*--------------------------------------------------------------
+# WP.org Header
+--------------------------------------------------------------*/
+#wporg-header h1 {
+	margin: auto
+}
+
+#wporg-header h2.rosetta {
+	clear: none
+}
+
+@media screen and (min-width: 769px) {
+	#wporg-header ul li.current-menu-item:after, #wporg-header ul li.current_page_parent:after, #wporg-header ul li a.current ~ .uparrow {
+		border-bottom-color: #0073aa
+	}
+}
+
+#wporg-header form input {
+	-webkit-box-sizing: content-box;
+	-moz-box-sizing: content-box;
+	box-sizing: content-box;
+	padding: 3px
+}
+
+#wporg-header .button {
+	-webkit-box-shadow: none;
+	box-shadow: none
+}
+
+#wporg-header .download-button {
+	background-color: #21759b;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2a95c5), to(#21759b));
+	background-image: -webkit-linear-gradient(top, #2a95c5, #21759b);
+	background-image: linear-gradient(180deg, #2a95c5, #21759b);
+	border-bottom-color: #1e6a8d;
+	border-color: #21759b;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, .5);
+	box-shadow: inset 0 1px 0 rgba(120, 200, 230, .5)
+}
+
+#wporg-header .download-button:focus, #wporg-header .download-button:hover {
+	background-color: #278ab7;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#2e9fd2), to(#21759b));
+	background-image: -webkit-linear-gradient(top, #2e9fd2, #21759b);
+	background-image: linear-gradient(180deg, #2e9fd2, #21759b);
+	border-color: #1b607f;
+	-webkit-box-shadow: inset 0 1px 0 rgba(120, 200, 230, .6);
+	box-shadow: inset 0 1px 0 rgba(120, 200, 230, .6);
+	color: #fff;
+	text-shadow: 0 -1px 0 rgba(0, 0, 0, .3)
+}
+
+#wporg-header .download-button:active {
+	background: #1b607f;
+	background-image: -webkit-gradient(linear, left top, left bottom, from(#21759b), to(#278ab7));
+	background-image: -webkit-linear-gradient(top, #21759b, #278ab7);
+	background-image: linear-gradient(180deg, #21759b, #278ab7);
+	border-color: #124560 #2382ae #2382ae;
+	-webkit-box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
+	box-shadow: inset 0 1px 0 rgba(0, 0, 0, .1);
+	color: hsla(0, 0%, 100%, .95);
+	text-shadow: 0 1px 0 rgba(0, 0, 0, .1);
+	-webkit-transform: none;
+	-ms-transform: none;
+	transform: none
+}
+
+#wporg-header a:active, #wporg-header a:focus, #wporg-header a:hover {
+	text-decoration: none
+}
+
+/*--------------------------------------------------------------
+# WP.org Overrides
+--------------------------------------------------------------*/
+
+/* Make sure all headers inherit from Gutenberg styles, not .org styles */
+h1, h2, h3, h4, h5, h6 {
+	font-family: "Noto Serif", serif;
+}
+
+/* Override the `p a` styling for .org */
+.site-title a {
+	border-bottom: none;
+}
+
+.site-title a:hover {
+	border-bottom-color: #00a0d2;
 }
