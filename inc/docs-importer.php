@@ -255,6 +255,7 @@ class Import_Gutendocs {
 		$html = preg_replace_callback( '/{%\s+codetabs\s+%}((?:.|\n|\r)*?){%\s+end\s+%}/', array( 'Import_Gutendocs', 'parse_code_blocks' ), $html );
 		$html = str_replace( 'class="php"', 'class="language-php"', $html );
 		$html = str_replace( 'class="js"', 'class="language-javascript"', $html );
+		$html = str_replace( 'class="css"', 'class="language-css"', $html );
 
         // Save the post
 		$post_data = array(
