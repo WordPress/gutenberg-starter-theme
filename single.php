@@ -7,7 +7,11 @@
  * @package Gutenbergtheme
  */
 
-get_header(); ?>
+get_header();
+
+get_sidebar( 'handbook' );
+
+?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main">

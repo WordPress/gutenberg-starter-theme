@@ -45,7 +45,7 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		 * @link https://developer.wordpress.org/themes/functionality/featured-images-post-thumbnails/
 		 */
 		add_theme_support( 'post-thumbnails' );
-		
+
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
 			'menu-1' => esc_html__( 'Primary', 'theme' ),
@@ -124,9 +124,11 @@ function gutenbergtheme_scripts() {
 
 	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/blocks.css');
 
-	wp_enqueue_style( 'gutenbergtheme-fonts', gutenbergtheme_fonts_url(), array(), null );
+	wp_enqueue_style( 'gutenbergtheme-prism', gutenbergtheme_fonts_url(), array(), null );
 
 	wp_enqueue_script( 'gutenbergtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+
+	wp_enqueue_script( 'gutenbergtheme-prism', get_template_directory_uri() . '/js/prism.js', array(), null );
 
 	wp_enqueue_script( 'gutenbergtheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -162,3 +164,13 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
+
+/**
+ * Gutenberg documentation
+ */
+require __DIR__ . '/inc/docs-importer.php';
+
+add_action( 'load-post.php', array( 'Import_Gutendocs', 'action_load_post_php' ) );
+add_action( 'edit_form_after_title', array( 'Import_Gutendocs', 'action_edit_form_after_title' ) );
+add_action( 'save_post', array( 'Import_Gutendocs', 'action_save_post' ) );
+add_filter( 'cron_schedules', array( 'Import_Gutendocs', 'filter_cron_schedules' ) );
