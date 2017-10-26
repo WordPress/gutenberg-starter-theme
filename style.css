@@ -1482,3 +1482,33 @@ h2.toc-heading + h3.toc-heading:target {
 .single-handbook .widget_wporg_handbook_pages {
 	background-color: transparent;
 }
+
+.single-handbook .navigation {
+	margin: 0 0 2em;
+	padding: 0;
+	overflow: hidden;
+	border-top: 1px solid #ccc;
+}
+.single-handbook .navigation .nav-previous {
+	float: left;
+	margin: 0;
+	padding: 0;
+	width: 50%;
+}
+.single-handbook .navigation .nav-next {
+	float: right;
+	margin: 0;
+	padding: 0;
+	text-align: right;
+	width: 50%;
+}
+.single-handbook .navigation a {
+	display: block;
+	padding: 1.2em;
+}
+.single-handbook .navigation .nav-previous a {
+	border-right: 1px solid #cccccc;
+}
+.single-handbook .navigation a:hover {
+	background: #fafafa;
+}
