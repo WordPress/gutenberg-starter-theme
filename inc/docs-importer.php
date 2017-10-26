@@ -102,7 +102,7 @@ class Import_Gutendocs {
 		return get_post( $post_id );
 	}
 
-	public static function action_wporg_cli_markdown_import() {
+	public static function action_wporg_gutenberg_markdown_import() {
 		$q = new WP_Query( array(
 			'post_type'      => self::$supported_post_types,
 			'post_status'    => 'publish',
@@ -246,15 +246,17 @@ class Import_Gutendocs {
 			$markdown = preg_replace( '/^#\s(.+)/', '', $markdown );
 		}
 
-		// Transform to HTML and save the post
+		// Transform to HTML
 		jetpack_require_lib( 'markdown' );
 		$parser = new \WPCom_GHF_Markdown_Parser;
 		$html = $parser->transform( $markdown );
 
+        // Turn the code blocks into tabs
 		$html = preg_replace_callback( '/{%\s+codetabs\s+%}((?:.|\n|\r)*?){%\s+end\s+%}/', array( 'Import_Gutendocs', 'parse_code_blocks' ), $html );
 		$html = str_replace( 'class="php"', 'class="language-php"', $html );
 		$html = str_replace( 'class="js"', 'class="language-javascript"', $html );
 
+        // Save the post
 		$post_data = array(
 			'ID'           => $post_id,
 			'post_content' => wp_filter_post_kses( wp_slash( $html ) ),
@@ -266,6 +268,10 @@ class Import_Gutendocs {
 		return true;
 	}
 
+    /**
+     * Callback for the preg_replace_callback() in ::update_post_from_markdown_source(),
+     * to transform a block of code tabs into HTML.
+     */
 	public static function parse_code_blocks( $matches ) {
 		$splitted_tabs = preg_split( '/{%\s+([\w]+)\s+%}/', trim( $matches[1] ), -1, PREG_SPLIT_NO_EMPTY | PREG_SPLIT_DELIM_CAPTURE );
 
