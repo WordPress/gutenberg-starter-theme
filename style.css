@@ -1391,8 +1391,10 @@ h2.toc-heading + h3.toc-heading:target {
   border-left: none;
 }
 .menu-table-of-contents-container .open .expandable .dashicons:not(:focus) {
-	background: #fff;
 	color: #0073aa;
+}
+.menu-table-of-contents-container .open .expandable .dashicons:hover {
+	color: #fff;
 }
 .menu-table-of-contents-container ul a {
   display: block;
