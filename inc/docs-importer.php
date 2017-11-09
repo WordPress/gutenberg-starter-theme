@@ -41,7 +41,8 @@ class Import_Gutendocs {
 		) );
 		$existing = $q->posts;
 		$created = 0;
-		foreach( $manifest as $doc ) {
+		foreach( $manifest as $id => $doc ) {
+			$doc['order'] = $id;
 			// Already exists
 			if ( wp_filter_object_list( $existing, array( 'post_name' => $doc['slug'] ) ) ) {
 				continue;
@@ -90,6 +91,7 @@ class Import_Gutendocs {
 			'post_parent' => $post_parent,
 			'post_title'  => sanitize_text_field( wp_slash( $doc['title'] ) ),
 			'post_name'   => sanitize_title_with_dashes( $doc['slug'] ),
+			'menu_order'  => $doc['order'],
 		);
 		$post_id = wp_insert_post( $post_data );
 		if ( ! $post_id ) {
