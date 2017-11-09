@@ -14,12 +14,12 @@ class Import_Gutendocs {
 	 * Register our cron task if it doesn't already exist
 	 */
 	public static function action_init() {
-		/*if ( ! wp_next_scheduled( 'wporg_gutenberg_manifest_import' ) ) {
+		if ( ! wp_next_scheduled( 'wporg_gutenberg_manifest_import' ) ) {
 			wp_schedule_event( time(), '15_minutes', 'wporg_gutenberg_manifest_import' );
 		}
 		if ( ! wp_next_scheduled( 'wporg_gutenberg_markdown_import' ) ) {
 			wp_schedule_event( time(), '15_minutes', 'wporg_gutenberg_markdown_import' );
-		}*/
+		}
 	}
 
 	public static function action_wporg_gutenberg_manifest_import() {
