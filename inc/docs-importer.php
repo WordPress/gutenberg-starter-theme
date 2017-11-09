@@ -14,12 +14,12 @@ class Import_Gutendocs {
 	 * Register our cron task if it doesn't already exist
 	 */
 	public static function action_init() {
-		/*if ( ! wp_next_scheduled( 'wporg_gutenberg_manifest_import' ) ) {
+		if ( ! wp_next_scheduled( 'wporg_gutenberg_manifest_import' ) ) {
 			wp_schedule_event( time(), '15_minutes', 'wporg_gutenberg_manifest_import' );
 		}
 		if ( ! wp_next_scheduled( 'wporg_gutenberg_markdown_import' ) ) {
 			wp_schedule_event( time(), '15_minutes', 'wporg_gutenberg_markdown_import' );
-		}*/
+		}
 	}
 
 	public static function action_wporg_gutenberg_manifest_import() {
@@ -40,12 +40,9 @@ class Import_Gutendocs {
 			'posts_per_page' => self::$posts_per_page,
 		) );
 		$existing = $q->posts;
-		$created = 0;
-		foreach( $manifest as $doc ) {
-			// Already exists
-			if ( wp_filter_object_list( $existing, array( 'post_name' => $doc['slug'] ) ) ) {
-				continue;
-			}
+		$created = $updated = 0;
+		foreach( $manifest as $id => $doc ) {
+			$doc['order'] = $id;
 			$post_parent = null;
 			if ( ! empty( $doc['parent'] ) ) {
 				// Find the parent in the existing set
@@ -69,14 +66,25 @@ class Import_Gutendocs {
 				}
 				$post_parent = $parent->ID;
 			}
-			$post = self::create_post_from_manifest_doc( $doc, $post_parent );
-			if ( $post ) {
-				$created++;
-				$existing[] = $post;
+			$existing_post = wp_filter_object_list( $existing, array( 'post_name' => $doc['slug'] ) );
+			if ( $existing_post ) {
+				$existing_post = array_shift( $existing_post );
+				$doc['ID'] = $existing_post->ID;
+				$post = self::update_post_from_manifest_doc( $doc, $post_parent );
+				if ( $post ) {
+					$updated++;
+					$existing[] = $post;
+				}
+			} else {
+				$post = self::create_post_from_manifest_doc( $doc, $post_parent );
+				if ( $post ) {
+					$created++;
+					$existing[] = $post;
+				}
 			}
 		}
 		if ( class_exists( 'WP_CLI' ) ) {
-			\WP_CLI::success( "Successfully created {$created} handbook pages." );
+			\WP_CLI::success( "Successfully created {$created} handbook pages, updated {$updated} handbook pages." );
 		}
 	}
 
@@ -90,6 +98,7 @@ class Import_Gutendocs {
 			'post_parent' => $post_parent,
 			'post_title'  => sanitize_text_field( wp_slash( $doc['title'] ) ),
 			'post_name'   => sanitize_title_with_dashes( $doc['slug'] ),
+			'menu_order'  => $doc['order'],
 		);
 		$post_id = wp_insert_post( $post_data );
 		if ( ! $post_id ) {
@@ -97,6 +106,27 @@ class Import_Gutendocs {
 		}
 		if ( class_exists( 'WP_CLI' ) ) {
 			\WP_CLI::log( "Created post {$post_id} for {$doc['title']}." );
+		}
+		update_post_meta( $post_id, self::$meta_key, esc_url_raw( $doc['markdown_source'] ) );
+		return get_post( $post_id );
+	}
+
+	/**
+	 * Update an existing handbook page from the manifest document
+	 */
+	private static function update_post_from_manifest_doc( $doc, $post_parent = null ) {
+		$post_data = array(
+			'ID'          => $doc['ID'],
+			'post_parent' => $post_parent,
+			'post_title'  => sanitize_text_field( wp_slash( $doc['title'] ) ),
+			'menu_order'  => $doc['order'],
+		);
+		$post_id = wp_update_post( $post_data );
+		if ( ! $post_id ) {
+			return false;
+		}
+		if ( class_exists( 'WP_CLI' ) ) {
+			\WP_CLI::log( "Updated post {$post_id}: {$doc['title']}." );
 		}
 		update_post_meta( $post_id, self::$meta_key, esc_url_raw( $doc['markdown_source'] ) );
 		return get_post( $post_id );
