@@ -2,7 +2,7 @@
 
 class Import_Gutendocs {
 
-	private static $handbook_manifest = 'https://raw.githubusercontent.com/WordPress/gutenberg/task/move-docs-to-w.org/docs/manifest.json';
+	private static $handbook_manifest = 'https://raw.githubusercontent.com/WordPress/gutenberg/master/docs/manifest.json';
 	private static $input_name = 'wporg-gutenberg-markdown-source';
 	private static $meta_key = 'wporg_gutenberg_markdown_source';
 	private static $nonce_name = 'wporg-gutenberg-markdown-source-nonce';
@@ -31,7 +31,7 @@ class Import_Gutendocs {
 		}
 		$manifest = json_decode( wp_remote_retrieve_body( $response ), true );
 		if ( ! $manifest ) {
-			return new WP_Error( 'invalid-manifest', 'Manifest did not unfurl properly.' );;
+			return new WP_Error( 'invalid-manifest', 'Manifest did not unfurl properly.' );
 		}
 		// Fetch all handbook posts for comparison
 		$q = new WP_Query( array(
