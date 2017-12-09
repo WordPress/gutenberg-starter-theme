@@ -171,6 +171,7 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Gutenberg documentation
  */
 require __DIR__ . '/inc/docs-importer.php';
+require __DIR__ . '/inc/class-gutenberg-handbook.php';
 
 add_action( 'load-post.php', array( 'Import_Gutendocs', 'action_load_post_php' ) );
 add_action( 'edit_form_after_title', array( 'Import_Gutendocs', 'action_edit_form_after_title' ) );
@@ -179,3 +180,7 @@ add_filter( 'cron_schedules', array( 'Import_Gutendocs', 'filter_cron_schedules'
 add_action( 'init', array( 'Import_Gutendocs', 'action_init' ) );
 add_action( 'wporg_gutenberg_manifest_import', array( 'Import_Gutendocs', 'action_wporg_gutenberg_manifest_import' ) );
 add_action( 'wporg_gutenberg_markdown_import', array( 'Import_Gutendocs', 'action_wporg_gutenberg_markdown_import' ) );
+
+add_filter( 'the_title', array( 'Gutenberg_Handbook', 'filter_the_title_edit_link' ), 10, 2 );
+add_filter( 'get_edit_post_link', array( 'Gutenberg_Handbook', 'redirect_edit_link_to_github' ), 10, 3 );
+add_filter( 'o2_filter_post_actions', array( 'Gutenberg_Handbook', 'redirect_o2_edit_link_to_github' ), 11, 2 );

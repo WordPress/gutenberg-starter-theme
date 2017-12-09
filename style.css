@@ -1512,3 +1512,26 @@ h2.toc-heading + h3.toc-heading:target {
 .single-handbook .navigation a:hover {
 	background: #fafafa;
 }
+
+a.github-edit {
+	margin-left: .5em;
+	font-size: .5em;
+	vertical-align: top;
+	display: inline-block;
+	border: 1px solid #eeeeee;
+	border-radius: 2px;
+	background: #eeeeee;
+	padding: .5em .6em .4em;
+	color: black;
+	margin-top: 0.1em;
+}
+a.github-edit > * {
+	opacity: 0.6;
+}
+a.github-edit:hover > * {
+	opacity: 1;
+	color: black;
+}
+a.github-edit img {
+	height: .8em;
+}
