@@ -19,7 +19,7 @@ class Gutenberg_Handbook {
 			return $title;
 		}
 
-		return $title . ' <a class="github-edit" href="' . esc_url( $markdown_source ) . '"><img src="' . esc_url( get_template_directory_uri() . '/assets/images/github-mark.svg' ) . '"> <span>Edit</span></a>';
+		return $title . ' <a class="github-edit" href="' . esc_url( $markdown_source ) . '"><img src="' . esc_url( get_template_directory_uri() . '/assets/images/github-mark.svg?20171212' ) . '"> <span>Edit</span></a>';
 	}
 
 	/**
