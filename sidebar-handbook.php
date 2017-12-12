@@ -5,7 +5,7 @@
  * @package Gutenbergtheme
  */
 
-if ( ! is_active_sidebar( wporg_get_current_handbook() ) )
+if ( ! function_exists( 'wporg_get_current_handbook' ) || ! is_active_sidebar( wporg_get_current_handbook() ) )
 	return;
 ?>
 	<div id="secondary" class="widget-area" role="complementary">
