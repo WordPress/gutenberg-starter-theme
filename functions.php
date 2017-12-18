@@ -48,7 +48,7 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'theme' ),
+			'menu-1' => esc_html__( 'Primary', 'gutenbergtheme' ),
 		) );
 
 		/*
@@ -98,7 +98,7 @@ function gutenbergtheme_fonts_url() {
 	 * supported by Karla, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'karuna' );
+	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'gutenbergtheme' );
 
 	if ( 'off' !== $notoserif ) {
 		$font_families = array();
