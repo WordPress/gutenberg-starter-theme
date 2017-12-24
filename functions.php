@@ -7,10 +7,6 @@
  * @package Gutenbergtheme
  */
 
-if ( ! defined( 'WPORGPATH' ) ) {
-	define( 'WPORGPATH', get_theme_file_path( '/inc/' ) );
-}
-
 if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
@@ -61,6 +57,27 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 			'comment-list',
 			'gallery',
 			'caption',
+		) );
+
+		// Set up the WordPress core custom background feature.
+		add_theme_support( 'custom-background', apply_filters( '_s_custom_background_args', array(
+			'default-color' => 'ffffff',
+			'default-image' => '',
+		) ) );
+
+		// Add theme support for selective refresh for widgets.
+		add_theme_support( 'customize-selective-refresh-widgets' );
+
+		/**
+		 * Add support for core custom logo.
+		 *
+		 * @link https://codex.wordpress.org/Theme_Logo
+		 */
+		add_theme_support( 'custom-logo', array(
+			'height'      => 250,
+			'width'       => 250,
+			'flex-width'  => true,
+			'flex-height' => true,
 		) );
 
 		add_theme_support( 'gutenberg', array(
@@ -120,17 +137,11 @@ function gutenbergtheme_fonts_url() {
  * Enqueue scripts and styles.
  */
 function gutenbergtheme_scripts() {
-	wp_enqueue_style( 'gutenbergtheme-style', get_stylesheet_uri() );
+	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/blocks.css');
-
-	wp_enqueue_style( 'gutenbergtheme-prism', gutenbergtheme_fonts_url(), array(), null );
+	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/blocks.css');
 
 	wp_enqueue_script( 'gutenbergtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
-
-	wp_enqueue_script( 'gutenbergtheme-prism', get_template_directory_uri() . '/js/prism.js', array(), null );
-
-	wp_enqueue_script( 'gutenbergtheme-handbook', get_template_directory_uri() . '/js/handbook.js', array( 'jquery' ), null );
 
 	wp_enqueue_script( 'gutenbergtheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
@@ -166,21 +177,3 @@ require get_template_directory() . '/inc/customizer.php';
 if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
-
-/**
- * Gutenberg documentation
- */
-require __DIR__ . '/inc/docs-importer.php';
-require __DIR__ . '/inc/class-gutenberg-handbook.php';
-
-add_action( 'load-post.php', array( 'Import_Gutendocs', 'action_load_post_php' ) );
-add_action( 'edit_form_after_title', array( 'Import_Gutendocs', 'action_edit_form_after_title' ) );
-add_action( 'save_post', array( 'Import_Gutendocs', 'action_save_post' ) );
-add_filter( 'cron_schedules', array( 'Import_Gutendocs', 'filter_cron_schedules' ) );
-add_action( 'init', array( 'Import_Gutendocs', 'action_init' ) );
-add_action( 'wporg_gutenberg_manifest_import', array( 'Import_Gutendocs', 'action_wporg_gutenberg_manifest_import' ) );
-add_action( 'wporg_gutenberg_markdown_import', array( 'Import_Gutendocs', 'action_wporg_gutenberg_markdown_import' ) );
-
-add_filter( 'the_title', array( 'Gutenberg_Handbook', 'filter_the_title_edit_link' ), 10, 2 );
-add_filter( 'get_edit_post_link', array( 'Gutenberg_Handbook', 'redirect_edit_link_to_github' ), 10, 3 );
-add_filter( 'o2_filter_post_actions', array( 'Gutenberg_Handbook', 'redirect_o2_edit_link_to_github' ), 11, 2 );
