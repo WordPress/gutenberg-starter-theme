@@ -12,7 +12,8 @@
 .entry-content ol,
 .wp-block-cover-text,
 .wp-block-button,
-.wp-block-gallery{
+.wp-block-gallery,
+.wp-block-table{
   margin: 1.5em auto;
   max-width: 720px;
 }
@@ -25,7 +26,8 @@
 .wp-block-image.alignwide,
 .wp-block-gallery.alignwide,
 .wp-block-text-columns.alignwide,
-.wp-block-gallery.alignwide{
+.wp-block-gallery.alignwide,
+.wp-block-table.alignwide{
   margin: 1.5em auto;
   max-width: 1100px;
 }
@@ -34,7 +36,8 @@
 .wp-block-image.alignfull,
 .wp-block-gallery.alignfull,
 .wp-block-text-columns.alignfull
-.wp-block-gallery.alignfull{
+.wp-block-gallery.alignfull,
+.wp-block-table.alignfull{
   margin: 1.5em 0;
   max-width: 100%;
 }
@@ -45,4 +48,19 @@
 
 .wp-block-cover-text p{
   padding: 1.5em 0;
+}
+
+.wp-block-table {
+    overflow-x: auto;
+    display: block
+}
+
+.wp-block-table table {
+    border-collapse: collapse;
+    width: 100%
+}
+
+.wp-block-table td, .wp-block-table th {
+    padding: .5em;
+    border: 1px solid currentColor
 }
