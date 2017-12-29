@@ -8,18 +8,25 @@
 .wp-block-video,
 .wp-block-quote,
 .wp-block-text-columns,
-.entry-content ul,
-.entry-content ol,
 .wp-block-cover-text,
 .wp-block-button,
 .wp-block-gallery,
 .wp-block-table{
   margin: 1.5em auto;
-  max-width: 720px;
+  max-width: 740px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.entry-content ul,
+.entry-content ol {
+  margin: 1.5em auto;
+  max-width: 740px;
+  list-style-position: outside;
 }
 
 .wp-block-video video {
-  max-width: 720px;
+  max-width: 740px;
 }
 
 .wp-block-cover-text.alignwide,
@@ -27,7 +34,8 @@
 .wp-block-gallery.alignwide,
 .wp-block-text-columns.alignwide,
 .wp-block-gallery.alignwide,
-.wp-block-table.alignwide{
+.wp-block-table.alignwide,
+.entry-content p.alignwide{
   margin: 1.5em auto;
   max-width: 1100px;
 }
@@ -37,7 +45,8 @@
 .wp-block-gallery.alignfull,
 .wp-block-text-columns.alignfull
 .wp-block-gallery.alignfull,
-.wp-block-table.alignfull{
+.wp-block-table.alignfull,
+.entry-content p.alignfull{
   margin: 1.5em 0;
   max-width: 100%;
 }
@@ -46,21 +55,55 @@
   margin: 1.5em auto;
 }
 
-.wp-block-cover-text p{
-  padding: 1.5em 0;
+.wp-block-cover-text p {
+  padding: 1.5em 20px;
+}
+
+ul.wp-block-latest-posts.alignwide,
+ul.wp-block-latest-posts.alignfull,
+ul.wp-block-latest-posts.is-grid.alignwide,
+ul.wp-block-latest-posts.is-grid.alignwide {
+  padding: 0 20px;
 }
 
 .wp-block-table {
-    overflow-x: auto;
-    display: block
+  display: block;
+  overflow-x: auto;
 }
 
 .wp-block-table table {
-    border-collapse: collapse;
-    width: 100%
+  border-collapse: collapse;
+  width: 100%
 }
 
 .wp-block-table td, .wp-block-table th {
-    padding: .5em;
-    border: 1px solid currentColor
+  padding: .5em;
+}
+
+.entry-content li{
+  list-style-position: outside;
+}
+
+@media screen and (min-width: 768px) {
+  .wp-block-cover-text p {
+    padding: 1.5em 0;
+  }
+
+  .entry-content p,
+  .entry-content h1,
+  .entry-content h2,
+  .entry-content h3,
+  .entry-content h4,
+  .wp-block-image,
+  .wp-block-gallery,
+  .wp-block-video,
+  .wp-block-quote,
+  .wp-block-text-columns,
+  .wp-block-cover-text,
+  .wp-block-button,
+  .wp-block-gallery,
+  .wp-block-table{
+    padding-left: 0px;
+    padding-right: 0px;
+  }
 }
