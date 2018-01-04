@@ -546,7 +546,6 @@ a:hover, a:active {
 	display: block;
   margin: 0 auto;
 	max-width: 720px;
-  text-align: center;
 }
 
 .main-navigation ul {
@@ -581,24 +580,25 @@ a:hover, a:active {
 
 .main-navigation ul li:hover > ul,
 .main-navigation ul li.focus > ul {
+  display: block;
 	left: auto;
 }
 
 .main-navigation li {
-	display: inline;
-  margin-left: 20px;
 	position: relative;
 }
 
 .main-navigation a {
-	display: inline;
+	display: block;
 	text-decoration: none;
 }
 
-/* Small menu. */
-.menu-toggle,
-.main-navigation.toggled ul {
-	display: block;
+@media screen and (max-width: 37.5em) {
+	/* Small menu. */
+	.menu-toggle,
+	.main-navigation.toggled ul {
+		display: block;
+	}
 }
 
 @media screen and (min-width: 37.5em) {
@@ -606,8 +606,14 @@ a:hover, a:active {
 		display: none;
 	}
 	.main-navigation ul {
-		display: block;
-	}
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+  
+  .main-navigation a {
+    padding: 0 .5em;
+  }
 }
 
 .site-main .comment-navigation, .site-main
