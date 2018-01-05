@@ -11,7 +11,8 @@
 .wp-block-cover-text,
 .wp-block-button,
 .wp-block-gallery,
-.wp-block-table{
+.wp-block-table,
+.wp-block-embed {
   margin: 1.5em auto;
   max-width: 740px;
   padding-left: 20px;
@@ -110,7 +111,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-button,
   .wp-block-gallery,
   .wp-block-table,
-  .wp-block-embed{
+  .wp-block-embed {
     padding-left: 0px;
     padding-right: 0px;
   }
