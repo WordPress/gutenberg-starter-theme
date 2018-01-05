@@ -35,7 +35,8 @@
 .wp-block-text-columns.alignwide,
 .wp-block-gallery.alignwide,
 .wp-block-table.alignwide,
-.entry-content p.alignwide{
+.wp-block-embed.alignwide,
+.entry-content p.alignwide {
   margin: 1.5em auto;
   max-width: 1100px;
 }
@@ -46,9 +47,15 @@
 .wp-block-text-columns.alignfull
 .wp-block-gallery.alignfull,
 .wp-block-table.alignfull,
-.entry-content p.alignfull{
+.wp-block-embed.alignfull,
+.entry-content p.alignfull {
   margin: 1.5em 0;
   max-width: 100%;
+}
+
+.wp-block-image img {
+  display: block;
+  width: 100%;
 }
 
 .wp-block-gallery:not(.components-placeholder) {
@@ -102,8 +109,26 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-cover-text,
   .wp-block-button,
   .wp-block-gallery,
-  .wp-block-table{
+  .wp-block-table,
+  .wp-block-embed{
     padding-left: 0px;
     padding-right: 0px;
   }
+}
+
+.wp-block-embed.type-video > .wp-block-embed__wrapper {
+  position: relative;
+  width: 100%;
+  height: 0;
+  padding-top: 56.25%;
+}
+
+.wp-block-embed.type-video > .wp-block-embed__wrapper > iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
 }
