@@ -11,7 +11,12 @@
 .wp-block-cover-text,
 .wp-block-button,
 .wp-block-gallery,
-.wp-block-table{
+.wp-block-table,
+.wp-block-audio,
+.wp-block-pullquote,
+.wp-block-preformatted,
+.wp-block-code,
+.wp-block-verse {
   margin: 1.5em auto;
   max-width: 740px;
   padding-left: 20px;
@@ -35,7 +40,12 @@
 .wp-block-text-columns.alignwide,
 .wp-block-gallery.alignwide,
 .wp-block-table.alignwide,
-.entry-content p.alignwide{
+.entry-content p.alignwide,
+.wp-block-audio.alignwide,
+.wp-block-pullquote.alignwide,
+.wp-block-preformatted.alignwide,
+.wp-block-code.alignwide,
+.wp-block-verse.alignwide {
   margin: 1.5em auto;
   max-width: 1100px;
 }
@@ -46,7 +56,12 @@
 .wp-block-text-columns.alignfull
 .wp-block-gallery.alignfull,
 .wp-block-table.alignfull,
-.entry-content p.alignfull{
+.entry-content p.alignfull,
+.wp-block-audio.alignefull,
+.wp-block-pullquote.alignefull,
+.wp-block-preformatted.alignefull,
+.wp-block-code.alignefull,
+.wp-block-verse.alignefull{
   margin: 1.5em 0;
   max-width: 100%;
 }
@@ -102,7 +117,9 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   .wp-block-cover-text,
   .wp-block-button,
   .wp-block-gallery,
-  .wp-block-table{
+  .wp-block-table,
+  .wp-block-audio,
+  .wp-block-pullquote {
     padding-left: 0px;
     padding-right: 0px;
   }
