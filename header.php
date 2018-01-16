@@ -21,7 +21,7 @@
 
 <body <?php body_class(); ?>>
 <div id="page" class="site">
-	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'gutenbergtheme' ); ?></a>
+	<a class="skip-link screen-reader-text" href="#primary"><?php esc_html_e( 'Skip to content', 'gutenbergtheme' ); ?></a>
 		<header id="masthead" class="site-header">
 			<div class="site-branding">
 				<?php
@@ -50,4 +50,3 @@
 				?>
 			</nav><!-- #site-navigation -->
 		</header><!-- #masthead -->
-	<div id="content" class="site-content">
