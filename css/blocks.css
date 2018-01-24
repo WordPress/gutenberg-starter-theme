@@ -60,11 +60,11 @@
 .wp-block-table.alignfull,
 .wp-block-embed.alignfull,
 .entry-content p.alignfull,
-.wp-block-audio.alignefull,
-.wp-block-pullquote.alignefull,
-.wp-block-preformatted.alignefull,
-.wp-block-code.alignefull,
-.wp-block-verse.alignefull {
+.wp-block-audio.alignfull,
+.wp-block-pullquote.alignfull,
+.wp-block-preformatted.alignfull,
+.wp-block-code.alignfull,
+.wp-block-verse.alignfull {
   margin: 1.5em 0;
   max-width: 100%;
 }
