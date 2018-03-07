@@ -610,7 +610,7 @@ a:hover, a:active {
     justify-content: center;
     flex-wrap: wrap;
   }
-  
+
   .main-navigation a {
     padding: 0 .5em;
   }
@@ -687,14 +687,36 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Alignments
 --------------------------------------------------------------*/
-.alignleft {
-  display: inline;
+
+.alignleft,
+.alignright {
+	max-width: 740px !important;	/* Let's work to make this !important unnecessary */
+}
+
+.alignleft img,
+.alignright img,
+.alignleft figcaption,
+.alignright figcaption {
+	max-width: 50%;
+	width: 50%;
+}
+
+.alignleft figcaption {
+	clear: left;
+	float: left;
+}
+
+.alignright figcaption {
+	clear: right;
+	float: right;
+}
+
+.alignleft img {
   float: left;
   margin-right: 1.5em;
 }
 
-.alignright {
-  display: inline;
+.alignright img {
   float: right;
   margin-left: 1.5em;
 }
