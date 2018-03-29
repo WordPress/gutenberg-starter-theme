@@ -80,15 +80,17 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 			'flex-height' => true,
 		) );
 
-		add_theme_support( 'gutenberg', array(
-			'wide-images' => true,
-   		'colors' => array(
-				'#0073aa',
-				'#229fd8',
-				'#eee',
-				'#444',
-			),
-		) );
+    // Add support for full and wide align images
+    add_theme_support( 'align-wide' );
+
+    // Add support for custom color scheme
+    add_theme_support( 'editor-color-palette',
+      '#0073aa',
+      '#229fd8',
+      '#eee',
+      '#444'
+    );
+
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
