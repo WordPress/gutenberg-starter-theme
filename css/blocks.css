@@ -83,6 +83,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
   max-width: 100px;
   margin: 3em auto;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
