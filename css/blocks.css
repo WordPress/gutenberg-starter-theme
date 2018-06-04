@@ -80,6 +80,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   right: 0;
 }
 
+.wp-block-separator {
+  max-width: 100px;
+  margin: 3em auto;
+  padding: 0;
+}
+
 @media screen and (min-width: 768px) {
   .wp-block-cover-text p {
     padding: 1.5em 0;
