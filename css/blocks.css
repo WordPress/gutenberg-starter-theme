@@ -1,5 +1,5 @@
 .entry-content > * {
-  margin: 1.5em auto;
+  margin: 36px auto;
   max-width: 636px;
   padding-left: 20px;
   padding-right: 20px;
@@ -78,6 +78,12 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   left: 0;
   bottom: 0;
   right: 0;
+}
+
+.wp-block-separator {
+  max-width: 100px;
+  margin: 3em auto;
+  padding: 0;
 }
 
 @media screen and (min-width: 768px) {
