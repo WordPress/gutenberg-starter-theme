@@ -27,7 +27,6 @@
 
 .wp-block-image img {
   display: block;
-  width: 100%;
 }
 
 .wp-block-gallery:not(.components-placeholder) {
