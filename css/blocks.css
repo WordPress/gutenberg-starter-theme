@@ -1,8 +1,8 @@
 .entry-content > * {
   margin: 36px auto;
   max-width: 636px;
-  padding-left: 20px;
-  padding-right: 20px;
+  padding-left: 14px;
+  padding-right: 14px;
 }
 
 .entry-content > .alignwide {
@@ -38,14 +38,14 @@
 }
 
 .wp-block-cover-text p {
-  padding: 1.5em 20px;
+  padding: 1.5em 14px;
 }
 
 ul.wp-block-latest-posts.alignwide,
 ul.wp-block-latest-posts.alignfull,
 ul.wp-block-latest-posts.is-grid.alignwide,
 ul.wp-block-latest-posts.is-grid.alignwide {
-  padding: 0 20px;
+  padding: 0 14px;
 }
 
 .wp-block-table {
