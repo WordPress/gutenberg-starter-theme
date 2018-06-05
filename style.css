@@ -563,7 +563,7 @@ a:hover, a:active {
 	clear: both;
 	display: block;
   margin: 0 auto;
-	max-width: 720px;
+	max-width: 636px;
 }
 
 .main-navigation ul {
@@ -639,7 +639,7 @@ a:hover, a:active {
 .site-main .post-navigation {
   border-bottom: 1px solid #111;
 	margin: 0 auto 60px;
-  max-width: 720px;
+  max-width: 636px;
 	overflow: hidden;
   padding-bottom: 60px;
 }
@@ -814,7 +814,7 @@ a:hover, a:active {
 .page-navigation,
 .comments-area {
   margin: 1.5em auto;
-  max-width: 720px;
+  max-width: 636px;
 }
 
 .entry-footer span{
