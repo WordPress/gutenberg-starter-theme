@@ -814,6 +814,8 @@ a:hover, a:active {
 .page-navigation,
 .comments-area {
   margin: 1.5em auto;
+  padding-left: 20px;
+  padding-right: 20px;
   max-width: 636px;
 }
 
@@ -824,8 +826,20 @@ a:hover, a:active {
 .entry-footer{
   color: #aaa;
   font-size: 90%;
-  padding: 0 0 40px 0;
+  padding-bottom: 40px;
   border-bottom: 1px solid #111;
+}
+
+@media screen and (min-width: 676px) {
+  .entry-header,
+  .entry-footer,
+  .site-info,
+  .post-navigation,
+  .page-navigation,
+  .comments-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
