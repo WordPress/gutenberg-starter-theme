@@ -564,6 +564,7 @@ a:hover, a:active {
 	display: block;
   margin: 0 auto;
 	max-width: 636px;
+  text-align: center;
 }
 
 .main-navigation ul {
@@ -609,6 +610,10 @@ a:hover, a:active {
 .main-navigation a {
 	display: block;
 	text-decoration: none;
+}
+
+.menu-toggle {
+  padding: 1em;
 }
 
 @media screen and (max-width: 37.5em) {
