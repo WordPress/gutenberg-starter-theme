@@ -581,6 +581,7 @@ a:hover, a:active {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+  text-align: left;
 }
 
 .main-navigation ul ul ul {
