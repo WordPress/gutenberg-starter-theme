@@ -130,7 +130,7 @@ function gutenbergtheme_fonts_url() {
 
 	/*
 	 *Translators: If there are characters in your language that are not
-	 * supported by Karla, translate this to 'off'. Do not translate
+	 * supported by Noto Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
 	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'gutenbergtheme' );
