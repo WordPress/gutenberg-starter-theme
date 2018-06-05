@@ -88,10 +88,22 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette',
-			'#0073aa',
-			'#229fd8',
-			'#eee',
-			'#444'
+			array(
+				'name' => 'strong blue',
+				'color' => '#0073aa',
+			),
+			array(
+				'name' => 'lighter blue',
+				'color' => '#229fd8',
+			),
+			array(
+				'name' => 'very light gray',
+				'color' => '#eee',
+			),
+			array(
+				'name' => 'very dark gray',
+				'color' => '#444',
+			)
 		);
 
 	}
