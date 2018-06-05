@@ -80,6 +80,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   right: 0;
 }
 
+.wp-block-pullquote>p:first-child {
+  margin-top: 0;
+}
+
 .wp-block-separator {
   max-width: 100px;
   margin: 3em auto;
