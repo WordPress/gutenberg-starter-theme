@@ -616,6 +616,7 @@ a:hover, a:active {
 	.menu-toggle,
 	.main-navigation.toggled ul {
 		display: block;
+    margin: 0 auto;
 	}
 }
 
