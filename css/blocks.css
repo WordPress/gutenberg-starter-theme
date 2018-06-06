@@ -83,6 +83,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   right: 0;
 }
 
+.wp-block-quote.is-large {
+  margin: 0 auto 16px;
+}
+
 .wp-block-pullquote>p:first-child {
   margin-top: 0;
 }
