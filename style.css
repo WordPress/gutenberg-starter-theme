@@ -564,6 +564,7 @@ a:hover, a:active {
 	display: block;
   margin: 0 auto;
 	max-width: 636px;
+  text-align: center;
 }
 
 .main-navigation ul {
@@ -580,6 +581,7 @@ a:hover, a:active {
 	top: 100%;
 	left: -999em;
 	z-index: 99999;
+  text-align: left;
 }
 
 .main-navigation ul ul ul {
@@ -611,11 +613,16 @@ a:hover, a:active {
 	text-decoration: none;
 }
 
+.menu-toggle {
+  padding: 1em;
+}
+
 @media screen and (max-width: 37.5em) {
 	/* Small menu. */
 	.menu-toggle,
 	.main-navigation.toggled ul {
 		display: block;
+    margin: 0 auto;
 	}
 }
 
@@ -814,6 +821,8 @@ a:hover, a:active {
 .page-navigation,
 .comments-area {
   margin: 1.5em auto;
+  padding-left: 14px;
+  padding-right: 14px;
   max-width: 636px;
 }
 
@@ -824,8 +833,20 @@ a:hover, a:active {
 .entry-footer{
   color: #aaa;
   font-size: 90%;
-  padding: 0 0 40px 0;
+  padding-bottom: 40px;
   border-bottom: 1px solid #111;
+}
+
+@media screen and (min-width: 664px) {
+  .entry-header,
+  .entry-footer,
+  .site-info,
+  .post-navigation,
+  .page-navigation,
+  .comments-area {
+    padding-left: 0;
+    padding-right: 0;
+  }
 }
 
 /*--------------------------------------------------------------
