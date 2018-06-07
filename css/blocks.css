@@ -29,6 +29,11 @@
   display: block;
 }
 
+.wp-block-image.alignleft.is-resized,
+.wp-block-image.alignright.is-resized {
+  width: 100%
+}
+
 .wp-block-image.alignfull img {
   width: 100vw;
 }
