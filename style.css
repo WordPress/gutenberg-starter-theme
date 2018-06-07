@@ -708,7 +708,7 @@ a:hover, a:active {
 
 .alignleft,
 .alignright {
-	max-width: 740px !important;	/* Let's work to make this !important unnecessary */
+	max-width: 636px !important;	/* Let's work to make this !important unnecessary */
 }
 
 .alignleft img,
@@ -721,20 +721,20 @@ a:hover, a:active {
 
 .alignleft figcaption {
 	clear: left;
-	float: left;
 }
 
 .alignright figcaption {
 	clear: right;
-	float: right;
 }
 
-.alignleft img {
+.alignleft img,
+.alignleft figcaption {
   float: left;
   margin-right: 1.5em;
 }
 
-.alignright img {
+.alignright img,
+.alignright figcaption {
   float: right;
   margin-left: 1.5em;
 }
