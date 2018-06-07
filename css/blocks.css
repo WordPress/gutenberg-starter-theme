@@ -29,8 +29,8 @@
   display: block;
 }
 
-.wp-block-image.alignleft.is-resized,
-.wp-block-image.alignright.is-resized {
+.wp-block-image.alignleft,
+.wp-block-image.alignright {
   width: 100%
 }
 
