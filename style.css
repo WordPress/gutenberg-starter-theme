@@ -815,11 +815,14 @@ a:hover, a:active {
 }
 
 .entry-header,
+.page-header,
 .entry-footer,
 .site-info,
 .post-navigation,
 .page-navigation,
-.comments-area {
+.comments-area,
+.not-found .page-content,
+.search .entry-summary {
   margin: 1.5em auto;
   padding-left: 14px;
   padding-right: 14px;
@@ -839,11 +842,14 @@ a:hover, a:active {
 
 @media screen and (min-width: 664px) {
   .entry-header,
+  .page-header,
   .entry-footer,
   .site-info,
   .post-navigation,
   .page-navigation,
-  .comments-area {
+  .comments-area,
+  .not-found .page-content,
+  .search .entry-summary {
     padding-left: 0;
     padding-right: 0;
   }
