@@ -1,21 +1,26 @@
-.entry-content > * {
+.entry-content > *,
+.entry-summary > * {
   margin: 36px auto;
   max-width: 636px;
   padding-left: 14px;
   padding-right: 14px;
 }
 
-.entry-content > .alignwide {
+.entry-content > .alignwide,
+.entry-summary > .alignwide {
   max-width: 1100px;
 }
 
-.entry-content > .alignfull {
+.entry-content > .alignfull,
+.entry-summary > .alignfull {
   margin: 1.5em 0;
   max-width: 100%;
 }
 
 .entry-content ul,
-.entry-content ol {
+.entry-content ol,
+.entry-summary ul,
+.entry-summary ol {
   margin: 1.5em auto;
   max-width: 636px;
   list-style-position: outside;
@@ -107,7 +112,8 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding: 1.5em 0;
   }
 
-  .entry-content > * {
+  .entry-content > *,
+  .entry-summary > * {
     padding-left: 0px;
     padding-right: 0px;
   }
