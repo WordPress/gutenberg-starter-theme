@@ -814,6 +814,7 @@ a:hover, a:active {
   margin: 0 0 1.5em;
 }
 
+.page-title,
 .entry-header,
 .entry-footer,
 .site-info,
@@ -838,6 +839,7 @@ a:hover, a:active {
 }
 
 @media screen and (min-width: 664px) {
+  .page-title,
   .entry-header,
   .entry-footer,
   .site-info,
