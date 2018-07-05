@@ -87,24 +87,28 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		add_theme_support( 'align-wide' );
 
 		// Add support for custom color scheme.
-		add_theme_support( 'editor-color-palette',
+		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name' => 'strong blue',
+				'name'  => 'strong blue',
+				'slug'  => 'strong-blue',
 				'color' => '#0073aa',
 			),
 			array(
-				'name' => 'lighter blue',
+				'name'  => 'lighter blue',
+				'slug'  => 'lighter-blue',
 				'color' => '#229fd8',
 			),
 			array(
-				'name' => 'very light gray',
+				'name'  => 'very light gray',
+				'slug'  => 'very-light-gray',
 				'color' => '#eee',
 			),
 			array(
-				'name' => 'very dark gray',
+				'name'  => 'very dark gray',
+				'slug'  => 'very-dark-gray',
 				'color' => '#444',
 			)
-		);
+		) );
 
 	}
 endif;
