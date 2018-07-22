@@ -17,6 +17,7 @@
 .entry-content ul,
 .entry-content ol {
   margin: 1.5em auto;
+  padding-left: calc( 1.3em + 14px );
   max-width: 636px;
   list-style-position: outside;
 }
