@@ -68,8 +68,24 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .entry-content li {
-  list-style-position: outside;
+  margin-left: 2.5em;
+  margin-bottom: 6px;
 }
+
+.entry-content ul ul,
+.entry-content ol ol,
+.entry-content ul ol,
+.entry-content ol ul {
+  margin: 0 auto;
+}
+
+.entry-content ul ul li,
+.entry-content ol ol li,
+.entry-content ul ol li,
+.entry-content ol ul li {
+  margin-left: 0;
+}
+
 
 .wp-block-embed.type-video > .wp-block-embed__wrapper {
   position: relative;
