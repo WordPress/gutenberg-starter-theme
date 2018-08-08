@@ -833,6 +833,10 @@ a:hover, a:active {
   max-width: 636px;
 }
 
+.entry-header .wp-post-image {
+  margin-bottom: 1.5em;
+}
+
 .entry-footer span{
   margin-right: 1em;
 }
