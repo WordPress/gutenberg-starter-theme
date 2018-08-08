@@ -89,27 +89,26 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => 'strong blue',
+				'name'  => __( 'Strong Blue', 'gutenbergtheme' ),
 				'slug'  => 'strong-blue',
 				'color' => '#0073aa',
 			),
 			array(
-				'name'  => 'lighter blue',
+				'name'  => __( 'Lighter Blue', 'gutenbergtheme' ),
 				'slug'  => 'lighter-blue',
 				'color' => '#229fd8',
 			),
 			array(
-				'name'  => 'very light gray',
+				'name'  => __( 'Very Light Gray', 'gutenbergtheme' ),
 				'slug'  => 'very-light-gray',
 				'color' => '#eee',
 			),
 			array(
-				'name'  => 'very dark gray',
+				'name'  => __( 'Very Dark Gray', 'gutenbergtheme' ),
 				'slug'  => 'very-dark-gray',
 				'color' => '#444',
-			)
+			),
 		) );
-
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
