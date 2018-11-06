@@ -109,6 +109,9 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 				'color' => '#444',
 			),
 		) );
+
+		// Add support for responsive embeds.
+		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
