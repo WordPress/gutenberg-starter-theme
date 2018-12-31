@@ -117,6 +117,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0;
 }
 
+.more-link {
+	display: block;
+}
+
 @media screen and (min-width: 768px) {
   .wp-block-cover-text p {
     padding: 1.5em 0;
