@@ -131,6 +131,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   max-width: 100%;
 }
 
+.wp-block-section.has-background > .alignfull {
+  width: calc( 100% + 60px );
+  max-width: calc( 100% + 60px );
+  position: relative;
+  left: -30px;
+}
+
 @media screen and (min-width: 768px) {
   .wp-block-cover-text p {
     padding: 1.5em 0;
