@@ -117,6 +117,10 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   padding: 0;
 }
 
+.more-link {
+	display: block;
+}
+
 .wp-block-section > * {
   max-width: 610px;
   margin-left: auto;
