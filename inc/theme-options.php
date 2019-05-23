@@ -40,7 +40,7 @@ function gutenbergtheme_options_page() { ?>
 			<table class="form-table">
 				<tr valign="top">
 					<td>
-						<label for="gutenbergtheme-dark-mode">
+						<label>
 							<input name="gutenbergtheme-dark-mode" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenbergtheme-dark-mode' ) ); ?> />
 							<?php _e( 'Enable a dark theme style for the editor.', 'gutenbergtheme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>)
