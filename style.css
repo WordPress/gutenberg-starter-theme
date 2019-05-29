@@ -761,9 +761,6 @@ a:hover, a:active {
 /*--------------------------------------------------------------
 # Widgets
 --------------------------------------------------------------*/
-.widget-area {
-	width: 25%;
-}
 
 .widget {
   margin: 0 0 1.5em;
@@ -826,7 +823,8 @@ a:hover, a:active {
 .page-navigation,
 .comments-area,
 .not-found .page-content,
-.search .entry-summary {
+.search .entry-summary,
+.widget-area {
   margin: 1.5em auto;
   padding-left: 14px;
   padding-right: 14px;
@@ -857,7 +855,8 @@ a:hover, a:active {
   .page-navigation,
   .comments-area,
   .not-found .page-content,
-  .search .entry-summary {
+  .search .entry-summary,
+  .widget-area {
     padding-left: 0;
     padding-right: 0;
   }
