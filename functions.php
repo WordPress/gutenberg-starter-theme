@@ -178,6 +178,23 @@ function gutenbergtheme_scripts() {
 add_action( 'wp_enqueue_scripts', 'gutenbergtheme_scripts' );
 
 /**
+ * Register widget area.
+ */
+function gutenbergtheme_widgets_init() {
+	register_sidebar( array(
+		'name'          => esc_html__( 'Footer', 'gutenbergtheme' ),
+		'id'            => 'sidebar-1',
+		'description'   => esc_html__( 'Add widgets here.', 'gutenbergtheme' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
+}
+add_action( 'widgets_init', 'gutenbergtheme_widgets_init' );
+
+
+/**
  * Implement the Custom Header feature.
  */
 require get_template_directory() . '/inc/custom-header.php';
