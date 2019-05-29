@@ -55,4 +55,5 @@ get_header(); ?>
 	</main><!-- #primary -->
 
 <?php
+get_sidebar();
 get_footer();
