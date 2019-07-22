@@ -318,7 +318,6 @@ address {
 }
 
 pre {
-  background: transparent;
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
@@ -336,6 +335,13 @@ code, kbd, tt, var {
   code, kbd, tt, var {
     font-size: 0.8125rem;
   }
+}
+
+p > code {
+  padding: 2px;
+  border-radius: 2px;
+  background: #f3f4f5;
+  font-size: inherit;
 }
 
 abbr, acronym {
