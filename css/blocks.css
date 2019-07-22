@@ -142,7 +142,7 @@ ul.wp-block-latest-posts.is-grid.alignwide {
   left: -30px;
 }
 
-@media screen and (min-width: 768px) {
+@media screen and (min-width: 664px) {
   .wp-block-cover-text p {
     padding: 1.5em 0;
   }
@@ -152,6 +152,19 @@ ul.wp-block-latest-posts.is-grid.alignwide {
     padding-right: 0px;
   }
 
+}
+
+.wp-block-code {
+  padding: 0.8em 1em;
+  margin-left: 14px;
+  margin-right: 14px;
+}
+
+@media screen and (min-width: 664px) {
+  .wp-block-code {
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
 
 /*--------------------------------------------------------------
