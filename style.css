@@ -287,7 +287,7 @@ input,
 select,
 optgroup,
 textarea {
-  color: #444;
+  color: #191e23;
   font-family: "Noto Serif", serif;
   font-size: 16px;
   font-size: 1rem;
@@ -295,7 +295,7 @@ textarea {
 }
 
 h1, h2, h3, h4, h5, h6 {
-  color: #32373c;
+  color: #191e23;
   clear: both;
 }
 
