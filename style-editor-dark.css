@@ -12,12 +12,9 @@ body {
 
 body,
 .wp-block,
-.editor-post-title__block .editor-post-title__input  {
-  color: #BBB;
-}
-
+.editor-post-title__block .editor-post-title__input,
 h1, h2, h3, h4, h5, h6 {
-  color: #CDC8C3;
+  color: #E6E1DC;
 }
 
 abbr, acronym {
