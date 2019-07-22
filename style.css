@@ -187,8 +187,8 @@ code,
 kbd,
 pre,
 samp {
-  font-family: monospace, monospace;
-  font-size: 1em;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
+  font-size: 0.875rem;
 }
 
 button,
@@ -318,21 +318,30 @@ address {
 }
 
 pre {
-  background: #eee;
-  font-family: "Courier 10 Pitch", Courier, monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
   line-height: 1.6;
   margin-bottom: 1.6em;
   max-width: 100%;
   overflow: auto;
-  padding: 1.6em;
+  padding: 0.8em 1em;
 }
 
 code, kbd, tt, var {
   font-family: Monaco, Consolas, "Andale Mono", "DejaVu Sans Mono", monospace;
-  font-size: 15px;
-  font-size: 0.9375rem;
+  font-size: 0.875rem;
+}
+
+@media screen and (min-width: 600px) {
+  code, kbd, tt, var {
+    font-size: 0.8125rem;
+  }
+}
+
+p > code {
+  padding: 2px;
+  border-radius: 2px;
+  background: #f3f4f5;
+  font-size: inherit;
 }
 
 abbr, acronym {
@@ -544,10 +553,6 @@ a {
   color: #0073aa;
 }
 
-a:visited {
-  color: #333;
-}
-
 a:hover, a:focus, a:active {
   color: #00a0d2;
 }
@@ -567,7 +572,7 @@ a:hover, a:active {
 	clear: both;
 	display: block;
   margin: 0 auto;
-	max-width: 636px;
+	max-width: 580px;
   text-align: center;
 }
 
@@ -650,7 +655,7 @@ a:hover, a:active {
 .site-main .post-navigation {
   border-bottom: 1px solid #111;
 	margin: 0 auto 60px;
-  max-width: 636px;
+  max-width: 580px;
 	overflow: hidden;
   padding-bottom: 60px;
 }
@@ -719,7 +724,7 @@ a:hover, a:active {
 
 .alignleft,
 .alignright {
-	max-width: 636px !important;	/* Let's work to make this !important unnecessary */
+	max-width: 580px !important;	/* Let's work to make this !important unnecessary */
 }
 
 .alignleft img,
@@ -830,7 +835,7 @@ a:hover, a:active {
   margin: 1.5em auto;
   padding-left: 14px;
   padding-right: 14px;
-  max-width: 636px;
+  max-width: 580px;
 }
 
 .entry-header .wp-post-image {
@@ -848,7 +853,7 @@ a:hover, a:active {
   border-bottom: 1px solid #111;
 }
 
-@media screen and (min-width: 664px) {
+@media screen and (min-width: 608px) {
   .entry-header,
   .page-header,
   .entry-footer,
