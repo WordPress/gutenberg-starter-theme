@@ -129,6 +129,10 @@
   max-width: 100%;
 }
 
+.wp-block-group.has-background > .wp-block-group__inner-container > :first-child {
+  margin-top: 0;
+}
+
 .wp-block-group.has-background > .wp-block-group__inner-container > .alignfull {
   width: calc( 100% + 60px );
   max-width: calc( 100% + 60px );
