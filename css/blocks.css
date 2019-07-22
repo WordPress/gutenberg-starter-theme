@@ -6,7 +6,7 @@
 }
 
 .entry-content > .alignwide {
-  max-width: 1100px;
+  max-width: 1070px;
 }
 
 .entry-content > .alignfull {
@@ -36,6 +36,14 @@
 
 .wp-block-image.alignfull img {
   width: 100vw;
+}
+
+.wp-block-image .alignleft img,
+.wp-block-image .alignright img,
+.wp-block-image .alignleft figcaption,
+.wp-block-image .alignright figcaption {
+  max-width: 100%;
+  width: 100%;
 }
 
 .wp-block-gallery:not(.components-placeholder) {
@@ -157,13 +165,13 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .wp-block-group > * {
-  max-width: 610px;
+  max-width: 554px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .wp-block-group > .alignwide {
-  max-width: 1100px;
+  max-width: 1070px;
 }
 
 .wp-block-group > .alignfull {
