@@ -42,7 +42,7 @@ function gutenbergtheme_options_page() { ?>
 					<td>
 						<label>
 							<input name="gutenbergtheme-dark-mode" type="checkbox" value="1" <?php checked( '1', get_option( 'gutenbergtheme-dark-mode' ) ); ?> />
-							<?php _e( 'Enable a dark theme style for the editor.', 'gutenbergtheme' ); ?>
+							<?php _e( 'Enable a dark theme style.', 'gutenbergtheme' ); ?>
 							(<a href="https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds"><code>dark-editor-style</code></a>)
 						</label>
 					</td>
@@ -70,3 +70,13 @@ function gutenbergtheme_enable_dark_mode() {
 	}
 }
 add_action( 'after_setup_theme', 'gutenbergtheme_enable_dark_mode' );
+
+/**
+ * Enable dark mode on the front end if gutenbergtheme-dark-mode setting is active.
+ */
+function gutenbergtheme_enable_dark_mode_frontend_styles() {
+	if ( get_option( 'gutenbergtheme-dark-mode' ) == 1 ) {
+		wp_enqueue_style( 'gutenbergthemedark-style', get_template_directory_uri() . '/css/dark-mode.css' );
+	}
+}
+add_action( 'wp_enqueue_scripts', 'gutenbergtheme_enable_dark_mode_frontend_styles' );
