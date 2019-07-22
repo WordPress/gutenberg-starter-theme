@@ -54,8 +54,18 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 .wp-block-table {
-  display: block;
   overflow-x: auto;
+  margin-left: 14px;
+  margin-right: 14px;
+  width: calc( 100% - 28px );
+}
+
+@media screen and (min-width: 664px) {
+  .wp-block-table {
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
 }
 
 .wp-block-table table {
