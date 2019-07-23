@@ -146,10 +146,6 @@ a {
   color: #00a0d2;
 }
 
-a:visited {
-  color: #CCC;
-}
-
 a:hover, a:focus, a:active {
   color: #66c6e4;
 }
