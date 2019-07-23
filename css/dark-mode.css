@@ -32,6 +32,12 @@ abbr, acronym {
   color: #8A8A8A;
 }
 
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  border-color: #1D1B18;
+}
+
 body {
   background: #000;
 }
@@ -166,5 +172,5 @@ a:hover, a:focus, a:active {
 
 .entry-footer {
   color: #8A8A8A;
-  border-color: #EEE;
+  border-color: #1D1B18;
 }
