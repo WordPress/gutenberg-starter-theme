@@ -4,7 +4,7 @@
  * Set up a WP-Admin page for managing turning on and off theme features.
  */
 function gutenbergtheme_add_options_page() {
-	add_menu_page(
+	add_theme_page(
 		'Theme Options',
 		'Theme Options',
 		'manage_options',
