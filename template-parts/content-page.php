@@ -4,7 +4,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 ?>
@@ -19,7 +19,7 @@
 			the_content();
 
 			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenbergtheme' ),
+				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'gutenberg-starter-theme' ),
 				'after'  => '</div>',
 			) );
 		?>
@@ -32,7 +32,7 @@
 					sprintf(
 						wp_kses(
 							/* translators: %s: Name of current post. Only visible to screen readers */
-							__( 'Edit <span class="screen-reader-text">%s</span>', 'gutenbergtheme' ),
+							__( 'Edit <span class="screen-reader-text">%s</span>', 'gutenberg-starter-theme' ),
 							array(
 								'span' => array(
 									'class' => array(),

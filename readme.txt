@@ -1,4 +1,4 @@
-=== gutenbergtheme ===
+=== gutenberg-starter-theme ===
 
 Contributors: everyone welcome
 Tags: translation-ready
@@ -25,7 +25,7 @@ Description
 
 = Does this theme support any plugins? =
 
-gutenbergtheme includes support for Infinite Scroll in Jetpack.
+gutenberg-starter-theme includes support for Infinite Scroll in Jetpack.
 
 == Changelog ==
 
