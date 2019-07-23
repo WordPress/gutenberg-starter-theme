@@ -1,8 +1,8 @@
 <?php
 /**
- * gutenbergtheme Theme Customizer
+ * gutenberg-starter-theme Theme Customizer
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 /**
@@ -50,6 +50,6 @@ function gutenberg_starter_theme_customize_partial_blogdescription() {
  * Binds JS handlers to make Theme Customizer preview reload changes asynchronously.
  */
 function gutenberg_starter_theme_customize_preview_js() {
-	wp_enqueue_script( 'gutenbergtheme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
+	wp_enqueue_script( 'gutenberg-starter-theme-customizer', get_template_directory_uri() . '/js/customizer.js', array( 'customize-preview' ), '20151215', true );
 }
 add_action( 'customize_preview_init', 'gutenberg_starter_theme_customize_preview_js' );

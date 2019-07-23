@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 get_header(); ?>
@@ -17,7 +17,7 @@ get_header(); ?>
 		<header class="page-header">
 			<h1 class="page-title"><?php
 				/* translators: %s: search query. */
-				printf( esc_html__( 'Search Results for: %s', 'gutenbergtheme' ), '<span>' . get_search_query() . '</span>' );
+				printf( esc_html__( 'Search Results for: %s', 'gutenberg-starter-theme' ), '<span>' . get_search_query() . '</span>' );
 			?></h1>
 		</header><!-- .page-header -->
 

@@ -1,10 +1,10 @@
 <?php
 /**
- * Gutenbergtheme functions and definitions
+ * gutenberg-starter-theme functions and definitions
  *
  * @link https://developer.wordpress.org/themes/basics/theme-functions/
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
@@ -19,10 +19,10 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
-		 * If you're building a theme based on gutenbergtheme, use a find and replace
-		 * to change 'gutenbergtheme' to the name of your theme in all the template files.
+		 * If you're building a theme based on gutenberg-starter-theme, use a find and replace
+		 * to change 'gutenberg-starter-theme' to the name of your theme in all the template files.
 		 */
-		load_theme_textdomain( 'gutenbergtheme', get_template_directory() . '/languages' );
+		load_theme_textdomain( 'gutenberg-starter-theme', get_template_directory() . '/languages' );
 
 		// Add default posts and comments RSS feed links to head.
 		add_theme_support( 'automatic-feed-links' );
@@ -44,7 +44,7 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus( array(
-			'menu-1' => esc_html__( 'Primary', 'gutenbergtheme' ),
+			'menu-1' => esc_html__( 'Primary', 'gutenberg-starter-theme' ),
 		) );
 
 		/*
@@ -89,22 +89,22 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 		// Add support for custom color scheme.
 		add_theme_support( 'editor-color-palette', array(
 			array(
-				'name'  => __( 'Strong Blue', 'gutenbergtheme' ),
+				'name'  => __( 'Strong Blue', 'gutenberg-starter-theme' ),
 				'slug'  => 'strong-blue',
 				'color' => '#0073aa',
 			),
 			array(
-				'name'  => __( 'Lighter Blue', 'gutenbergtheme' ),
+				'name'  => __( 'Lighter Blue', 'gutenberg-starter-theme' ),
 				'slug'  => 'lighter-blue',
 				'color' => '#229fd8',
 			),
 			array(
-				'name'  => __( 'Very Light Gray', 'gutenbergtheme' ),
+				'name'  => __( 'Very Light Gray', 'gutenberg-starter-theme' ),
 				'slug'  => 'very-light-gray',
 				'color' => '#eee',
 			),
 			array(
-				'name'  => __( 'Very Dark Gray', 'gutenbergtheme' ),
+				'name'  => __( 'Very Dark Gray', 'gutenberg-starter-theme' ),
 				'slug'  => 'very-dark-gray',
 				'color' => '#444',
 			),
@@ -139,7 +139,7 @@ function gutenberg_starter_theme_fonts_url() {
 	 * supported by Noto Serif, translate this to 'off'. Do not translate
 	 * into your own language.
 	 */
-	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'gutenbergtheme' );
+	$notoserif = esc_html_x( 'on', 'Noto Serif font: on or off', 'gutenberg-starter-theme' );
 
 	if ( 'off' !== $notoserif ) {
 		$font_families = array();
@@ -163,13 +163,13 @@ function gutenberg_starter_theme_fonts_url() {
 function gutenberg_starter_theme_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
-	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
+	wp_enqueue_style( 'gutenberg-starter-themeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
 
-	wp_enqueue_style( 'gutenbergtheme-fonts', gutenberg_starter_theme_fonts_url() );
+	wp_enqueue_style( 'gutenberg-starter-theme-fonts', gutenberg_starter_theme_fonts_url() );
 
-	wp_enqueue_script( 'gutenbergtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
+	wp_enqueue_script( 'gutenberg-starter-theme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
-	wp_enqueue_script( 'gutenbergtheme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
+	wp_enqueue_script( 'gutenberg-starter-theme-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
 
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
