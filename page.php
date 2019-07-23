@@ -9,7 +9,7 @@
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 get_header(); ?>

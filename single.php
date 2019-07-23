@@ -4,7 +4,7 @@
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *
- * @package Gutenbergtheme
+ * @package gutenberg-starter-theme
  */
 
 get_header(); ?>
@@ -17,8 +17,8 @@ get_header(); ?>
 		get_template_part( 'template-parts/content', get_post_type() );
 
 		the_post_navigation( array(
-			'prev_text' => '← %title',
-			'next_text' => '%title →',
+			'prev_text' => '&larr; %title',
+			'next_text' => '%title &rarr;',
 		) );
 
 		// If comments are open or we have at least one comment, load up the comment template.
