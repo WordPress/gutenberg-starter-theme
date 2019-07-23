@@ -3,25 +3,25 @@
 /**
  * Set up a WP-Admin page for managing turning on and off theme features.
  */
-function gutenbergtheme_add_options_page() {
+function gutenberg_starter_theme_add_options_page() {
 	add_theme_page(
 		'Theme Options',
 		'Theme Options',
 		'manage_options',
 		'gutenbergtheme-options',
-		'gutenbergtheme_options_page'
+		'gutenberg_starter_theme_options_page'
 	);
 
 	// Call register settings function
-	add_action( 'admin_init', 'gutenbergtheme_options' );
+	add_action( 'admin_init', 'gutenberg_starter_theme_options' );
 }
-add_action( 'admin_menu', 'gutenbergtheme_add_options_page' );
+add_action( 'admin_menu', 'gutenberg_starter_theme_add_options_page' );
 
 
 /**
  * Register settings for the WP-Admin page.
  */
-function gutenbergtheme_options() {
+function gutenberg_starter_theme_options() {
 	register_setting( 'gutenbergtheme-options', 'gutenbergtheme-dark-mode' );
 }
 
@@ -29,7 +29,7 @@ function gutenbergtheme_options() {
 /**
  * Build the WP-Admin settings page.
  */
-function gutenbergtheme_options_page() { ?>
+function gutenberg_starter_theme_options_page() { ?>
 	<div class="wrap">
 	<h1><?php _e('Gutenberg Starter Theme Options', 'gutenbergtheme'); ?></h1>
 
@@ -58,7 +58,7 @@ function gutenbergtheme_options_page() { ?>
 /**
  * Enable dark mode if gutenbergtheme-dark-mode setting is active.
  */
-function gutenbergtheme_enable_dark_mode() {
+function gutenberg_starter_theme_enable_dark_mode() {
 	if ( get_option( 'gutenbergtheme-dark-mode' ) == 1 ) {
 		
 		// Add support for editor styles.
@@ -69,14 +69,14 @@ function gutenbergtheme_enable_dark_mode() {
 		add_theme_support( 'dark-editor-style' );
 	}
 }
-add_action( 'after_setup_theme', 'gutenbergtheme_enable_dark_mode' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_dark_mode' );
 
 /**
  * Enable dark mode on the front end if gutenbergtheme-dark-mode setting is active.
  */
-function gutenbergtheme_enable_dark_mode_frontend_styles() {
+function gutenberg_starter_theme_enable_dark_mode_frontend_styles() {
 	if ( get_option( 'gutenbergtheme-dark-mode' ) == 1 ) {
 		wp_enqueue_style( 'gutenbergthemedark-style', get_template_directory_uri() . '/css/dark-mode.css' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gutenbergtheme_enable_dark_mode_frontend_styles' );
+add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_enable_dark_mode_frontend_styles' );

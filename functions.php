@@ -7,7 +7,7 @@
  * @package Gutenbergtheme
  */
 
-if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
+if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 	/**
 	 * Sets up theme defaults and registers support for various WordPress features.
 	 *
@@ -15,7 +15,7 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 	 * runs before the init hook. The init hook is too late for some features, such
 	 * as indicating support for post thumbnails.
 	 */
-	function gutenbergtheme_setup() {
+	function gutenberg_starter_theme_setup() {
 		/*
 		 * Make theme available for translation.
 		 * Translations can be filed in the /languages/ directory.
@@ -114,7 +114,7 @@ if ( ! function_exists( 'gutenbergtheme_setup' ) ) :
 		add_theme_support( 'responsive-embeds' );
 	}
 endif;
-add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_setup' );
 
 /**
  * Set the content width in pixels, based on the theme's design and stylesheet.
@@ -123,15 +123,15 @@ add_action( 'after_setup_theme', 'gutenbergtheme_setup' );
  *
  * @global int $content_width
  */
-function gutenbergtheme_content_width() {
-	$GLOBALS['content_width'] = apply_filters( 'gutenbergtheme_content_width', 640 );
+function gutenberg_starter_theme_content_width() {
+	$GLOBALS['content_width'] = apply_filters( 'gutenberg_starter_theme_content_width', 640 );
 }
-add_action( 'after_setup_theme', 'gutenbergtheme_content_width', 0 );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_content_width', 0 );
 
 /**
  * Register Google Fonts
  */
-function gutenbergtheme_fonts_url() {
+function gutenberg_starter_theme_fonts_url() {
 	$fonts_url = '';
 
 	/*
@@ -160,12 +160,12 @@ function gutenbergtheme_fonts_url() {
 /**
  * Enqueue scripts and styles.
  */
-function gutenbergtheme_scripts() {
+function gutenberg_starter_theme_scripts() {
 	wp_enqueue_style( 'gutenbergbase-style', get_stylesheet_uri() );
 
 	wp_enqueue_style( 'gutenbergthemeblocks-style', get_template_directory_uri() . '/css/blocks.css' );
 
-	wp_enqueue_style( 'gutenbergtheme-fonts', gutenbergtheme_fonts_url() );
+	wp_enqueue_style( 'gutenbergtheme-fonts', gutenberg_starter_theme_fonts_url() );
 
 	wp_enqueue_script( 'gutenbergtheme-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
@@ -175,7 +175,7 @@ function gutenbergtheme_scripts() {
 		wp_enqueue_script( 'comment-reply' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gutenbergtheme_scripts' );
+add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_scripts' );
 
 /**
  * Implement the Custom Header feature.
