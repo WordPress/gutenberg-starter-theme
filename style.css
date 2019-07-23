@@ -299,10 +299,10 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-.entry-header h1.entry-title {
+.entry-header .entry-title {
   font-size: 2.44em;
   line-height: 1.4;
-  margin: 1em 0;
+  margin: 1em 0 1rem;
 }
 
 dfn, cite, em, i {
@@ -385,7 +385,7 @@ big {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #929292;
+	color: #6c7781;
 }
 /*--------------------------------------------------------------
 # Elements
@@ -794,7 +794,8 @@ a:hover, a:active {
 
 .site-footer {
   margin: 1em 0;
-  opacity: 0.5;
+  color: #6c7781;
+  font-size: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -816,6 +817,11 @@ a:hover, a:active {
 .entry-content,
 .entry-summary {
   margin: 1.5em 0 0;
+}
+
+.entry-meta {
+  color: #6c7781;
+  font-size: 90%;
 }
 
 .page-links {
@@ -847,7 +853,7 @@ a:hover, a:active {
 }
 
 .entry-footer{
-  color: #aaa;
+  color: #6c7781;
   font-size: 90%;
   padding-bottom: 40px;
   border-bottom: 1px solid #111;

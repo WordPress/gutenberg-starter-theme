@@ -27,6 +27,11 @@ abbr, acronym {
   color: #CCCCCD;
 }
 
+.site-description,
+.site-footer {
+  color: #8A8A8A;
+}
+
 body {
   background: #000;
 }
@@ -155,6 +160,11 @@ a:hover, a:focus, a:active {
 ## Posts and pages
 --------------------------------------------------------------*/
 
+.entry-meta {
+  color: #8A8A8A;
+}
+
 .entry-footer {
+  color: #8A8A8A;
   border-color: #EEE;
 }
