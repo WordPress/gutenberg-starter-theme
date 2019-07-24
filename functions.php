@@ -79,39 +79,6 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
-
-		// Adding support for core block visual styles.
-		add_theme_support( 'wp-block-styles' );
-
-		// Add support for full and wide align images.
-		add_theme_support( 'align-wide' );
-
-		// Add support for custom color scheme.
-		add_theme_support( 'editor-color-palette', array(
-			array(
-				'name'  => __( 'Strong Blue', 'gutenberg-starter-theme' ),
-				'slug'  => 'strong-blue',
-				'color' => '#0073aa',
-			),
-			array(
-				'name'  => __( 'Lighter Blue', 'gutenberg-starter-theme' ),
-				'slug'  => 'lighter-blue',
-				'color' => '#229fd8',
-			),
-			array(
-				'name'  => __( 'Very Light Gray', 'gutenberg-starter-theme' ),
-				'slug'  => 'very-light-gray',
-				'color' => '#eee',
-			),
-			array(
-				'name'  => __( 'Very Dark Gray', 'gutenberg-starter-theme' ),
-				'slug'  => 'very-dark-gray',
-				'color' => '#444',
-			),
-		) );
-
-		// Add support for responsive embeds.
-		add_theme_support( 'responsive-embeds' );
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenberg_starter_theme_setup' );
