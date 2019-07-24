@@ -167,7 +167,7 @@ function gutenberg_starter_theme_enable_dark_mode_frontend_styles() {
 		wp_enqueue_style( 'gutenberg-starter-themedark-style', get_template_directory_uri() . '/css/dark-mode.css' );
 	}
 }
-add_action( 'wp_enqueue_scripts', 'gutenberg_starter_themeenable_dark_mode_frontend_styles' );
+add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_enable_dark_mode_frontend_styles' );
 
 /**
  * Enable core block styles support if the gutenberg-starter-theme-wp-block-styles setting is active.
