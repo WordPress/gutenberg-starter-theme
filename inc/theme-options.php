@@ -97,7 +97,7 @@ function gutenberg_starter_theme_options_page() { ?>
 /**
  * Enable alignwide and alignfull support if the gutenberg-starter-theme-align-wide setting is active.
  */
-function gutenberg_starter_themeenable_align_wide() {
+function gutenberg_starter_theme_enable_align_wide() {
 
 	if ( get_option( 'gutenberg-starter-theme-align-wide', 1 ) == 1 ) {
 		
@@ -105,13 +105,13 @@ function gutenberg_starter_themeenable_align_wide() {
 		add_theme_support( 'align-wide' );
 	}
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_themeenable_align_wide' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_align_wide' );
 
 
 /**
  * Enable custom theme colors if the gutenberg-starter-theme-editor-color-palette setting is active.
  */
-function gutenberg_starter_themeenable_editor_color_palette() {
+function gutenberg_starter_theme_enable_editor_color_palette() {
 	if ( get_option( 'gutenberg-starter-theme-editor-color-palette', 1 ) == 1 ) {
 		
 		// Add support for a custom color scheme.
@@ -139,7 +139,7 @@ function gutenberg_starter_themeenable_editor_color_palette() {
 		) );
 	}
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_themeenable_editor_color_palette' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_editor_color_palette' );
 
 
 /**
@@ -172,7 +172,7 @@ add_action( 'wp_enqueue_scripts', 'gutenberg_starter_theme_enable_dark_mode_fron
 /**
  * Enable core block styles support if the gutenberg-starter-theme-wp-block-styles setting is active.
  */
-function gutenberg_starter_themeenable_wp_block_styles() {
+function gutenberg_starter_theme_enable_wp_block_styles() {
 
 	if ( get_option( 'gutenberg-starter-theme-wp-block-styles', 1 ) == 1 ) {
 		
@@ -180,13 +180,13 @@ function gutenberg_starter_themeenable_wp_block_styles() {
 		add_theme_support( 'wp-block-styles' );
 	}
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_themeenable_wp_block_styles' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_wp_block_styles' );
 
 
 /**
  * Enable responsive embedded content if the gutenberg-starter-theme-responsive-embeds setting is active.
  */
-function gutenberg_starter_themeenable_responsive_embeds() {
+function gutenberg_starter_theme_enable_responsive_embeds() {
 
 	if ( get_option( 'gutenberg-starter-theme-responsive-embeds', 1 ) == 1 ) {
 		
@@ -194,4 +194,4 @@ function gutenberg_starter_themeenable_responsive_embeds() {
 		add_theme_support( 'responsive-embeds' );
 	}
 }
-add_action( 'after_setup_theme', 'gutenberg_starter_themeenable_responsive_embeds' );
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_responsive_embeds' );
