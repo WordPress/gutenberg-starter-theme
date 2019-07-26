@@ -34,7 +34,6 @@ function gutenberg_starter_theme_customize_register( $wp_customize ) {
 	 * Create Theme Options panel
 	 */
 	$wp_customize->add_section( 'gutenberg_starter_theme_options', array(
-		'priority'   => 1,
 		'capability' => 'edit_theme_options',
 		'title'      => esc_html__( 'Theme Options', 'gutenberg-starter-theme' ),
 	) );
