@@ -299,10 +299,10 @@ h1, h2, h3, h4, h5, h6 {
   clear: both;
 }
 
-.entry-header h1.entry-title {
+.entry-header .entry-title {
   font-size: 2.44em;
   line-height: 1.4;
-  margin: 1em 0;
+  margin: 1em 0 1rem;
 }
 
 dfn, cite, em, i {
@@ -385,7 +385,7 @@ big {
 	font-weight: inherit;
 	line-height: 1.4;
 	word-wrap: break-word;
-	color: #929292;
+	color: #6c7781;
 }
 /*--------------------------------------------------------------
 # Elements
@@ -653,7 +653,7 @@ a:hover, a:active {
 .site-main .comment-navigation,
 .site-main .posts-navigation,
 .site-main .post-navigation {
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #e2e4e7;
 	margin: 0 auto 60px;
   max-width: 580px;
 	overflow: hidden;
@@ -794,7 +794,8 @@ a:hover, a:active {
 
 .site-footer {
   margin: 1em 0;
-  opacity: 0.5;
+  color: #6c7781;
+  font-size: 90%;
 }
 
 /*--------------------------------------------------------------
@@ -818,6 +819,11 @@ a:hover, a:active {
   margin: 1.5em 0 0;
 }
 
+.entry-meta {
+  color: #6c7781;
+  font-size: 90%;
+}
+
 .page-links {
   clear: both;
   margin: 0 0 1.5em;
@@ -827,6 +833,7 @@ a:hover, a:active {
 .page-header,
 .entry-footer,
 .site-info,
+.posts-navigation,
 .post-navigation,
 .page-navigation,
 .comments-area,
@@ -847,10 +854,10 @@ a:hover, a:active {
 }
 
 .entry-footer{
-  color: #aaa;
+  color: #6c7781;
   font-size: 90%;
   padding-bottom: 40px;
-  border-bottom: 1px solid #111;
+  border-bottom: 1px solid #e2e4e7;
 }
 
 @media screen and (min-width: 608px) {
@@ -858,6 +865,7 @@ a:hover, a:active {
   .page-header,
   .entry-footer,
   .site-info,
+  .posts-navigation,
   .post-navigation,
   .page-navigation,
   .comments-area,

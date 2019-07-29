@@ -27,6 +27,17 @@ abbr, acronym {
   color: #CCCCCD;
 }
 
+.site-description,
+.site-footer {
+  color: #8A8A8A;
+}
+
+.site-main .comment-navigation,
+.site-main .posts-navigation,
+.site-main .post-navigation {
+  border-color: #1D1B18;
+}
+
 body {
   background: #000;
 }
@@ -135,10 +146,6 @@ a {
   color: #00a0d2;
 }
 
-a:visited {
-  color: #CCC;
-}
-
 a:hover, a:focus, a:active {
   color: #66c6e4;
 }
@@ -155,6 +162,11 @@ a:hover, a:focus, a:active {
 ## Posts and pages
 --------------------------------------------------------------*/
 
+.entry-meta {
+  color: #8A8A8A;
+}
+
 .entry-footer {
-  border-color: #EEE;
+  color: #8A8A8A;
+  border-color: #1D1B18;
 }
