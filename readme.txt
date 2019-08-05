@@ -1,6 +1,6 @@
 === gutenberg-starter-theme ===
 
-Contributors: wordpressdotorg, aduth, artisticasad, crunnells, joen, karmatosed, kjellr, littlebigthing, marekhrabe, melchoyce, milana_cap, mor10, netweb, noisysocks, obenland, paulstonier, pento, richtabor, sharaz, shinichin, soean, sumobi
+Contributors: wordpressdotorg, aduth, artisticasad, crunnells, joen, joyously, karmatosed, kjellr, littlebigthing, marekhrabe, melchoyce, milana_cap, mor10, netweb, noisysocks, obenland, paulstonier, pento, richtabor, sharaz, shinichin, soean, sumobi
 Tags: translation-ready
 Requires at least: 5.0
 Tested up to: 5.2.2
