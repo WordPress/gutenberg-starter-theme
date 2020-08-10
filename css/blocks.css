@@ -11,9 +11,11 @@
   ## Latest Posts
   ## List
   ## More
+  ## Navigation
   ## Pullquote
   ## Quote
   ## Separator
+  ## Site Tagline
   ## Table
   ## Video
 # Additional Theme Styles
@@ -115,7 +117,7 @@
 ## Group
 --------------------------------------------------------------*/
 
-.wp-block-group > .wp-block-group__inner-container > * {
+.wp-block-group > .wp-block-group__inner-container > *:not(.entry-content) {
   max-width: 580px;
   margin-left: auto;
   margin-right: auto;
@@ -214,6 +216,15 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 }
 
 /*--------------------------------------------------------------
+## Navigation
+--------------------------------------------------------------*/
+
+.wp-block-navigation-link__label {
+  font-family: inherit;
+  color: #0073aa;
+}
+
+/*--------------------------------------------------------------
 ## Pullquote
 --------------------------------------------------------------*/
 
@@ -262,6 +273,22 @@ ul.wp-block-latest-posts.is-grid.alignwide {
 .wp-block-separator {
   margin: 3em auto;
   padding: 0;
+}
+
+/*--------------------------------------------------------------
+## Site Tagline
+--------------------------------------------------------------*/
+
+.wp-block-site-tagline {
+  margin-top: 0;
+}
+
+/*--------------------------------------------------------------
+## Site Title
+--------------------------------------------------------------*/
+
+.wp-block-site-title {
+  margin-bottom: 0;
 }
 
 /*--------------------------------------------------------------
