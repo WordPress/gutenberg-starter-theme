@@ -1,0 +1,24 @@
+/*--------------------------------------------------------------
+# Editor Styles
+--------------------------------------------------------------*/
+
+/*--------------------------------------------------------------
+## Fix misaligned block inserter after disabling core bocks.
+--------------------------------------------------------------*/
+.block-list-appender>.block-editor-inserter {
+	display: flex;
+	justify-content: center;
+}
+
+/*--------------------------------------------------------------
+## Outline each block.
+--------------------------------------------------------------*/
+.wp-block:not(.editor-post-title) {
+	padding: 6px;
+	outline: 1px solid #e0e0e0;
+}
+
+.wp-block:not(.editor-post-title).is-selected {
+	padding: 6px;
+	outline: 1px solid #000;
+}

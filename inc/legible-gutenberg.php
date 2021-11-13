@@ -25,3 +25,13 @@ function gutenberg_starter_theme_disable_editor_fullscreen_mode() {
 	wp_add_inline_script( 'wp-blocks', $script );
 }
 add_action( 'enqueue_block_editor_assets', 'gutenberg_starter_theme_disable_editor_fullscreen_mode' );
+
+/**
+ * Enable custom editor styles.
+ */
+function gutenberg_starter_theme_enable_editor_styles() {
+	// Add support for editor styles.
+	add_theme_support( 'editor-styles' );
+	add_editor_style( 'style-editor.css' );
+}
+add_action( 'after_setup_theme', 'gutenberg_starter_theme_enable_editor_styles' );
