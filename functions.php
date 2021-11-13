@@ -175,3 +175,8 @@ if ( defined( 'JETPACK__VERSION' ) ) {
  * Theme Settings
  */
 require get_template_directory() . '/inc/theme-options.php';
+
+/**
+ * Functions that make Gutenberg easier to use
+ */
+require get_template_directory() . '/inc/legible-gutenberg.php';
