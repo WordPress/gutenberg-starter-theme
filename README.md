@@ -10,7 +10,6 @@ There are a few optional settings available in the `Appearance > Theme Options` 
 
 - [**Wide alignment**](https://developer.wordpress.org/block-editor/developers/themes/theme-support/#wide-alignment). By default, wide and full alignments are active in the theme. This setting provides you the option to turn them off. 
 - [**Color palette**](https://developer.wordpress.org/block-editor/developers/themes/theme-support/#block-color-palettes). The theme provides a limited custom color palette by default. This can be toggled off if you'd like to test the default Gutenberg colors. 
-- [**Dark background**](https://developer.wordpress.org/block-editor/developers/themes/theme-support/#dark-backgrounds). Gutenberg provides some alternate UI colors, optimized for themes that use a dark background color. Turning this on will allow you to test those by enabling a dark mode of the theme. 
 - [**Block Styles**](https://developer.wordpress.org/block-editor/developers/themes/theme-support/#default-block-styles). This option allows you to opt-in or out of having Gutenberg provide some structural CSS for certain blocks on the front end.
 - [**Responsive embedded content**](https://developer.wordpress.org/block-editor/developers/themes/theme-support/#responsive-embedded-content). When this is active, embed blocks will automatically reflect the aspect ratio of content that is embedded in an iFrame.
 
