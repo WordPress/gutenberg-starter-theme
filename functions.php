@@ -79,6 +79,12 @@ if ( ! function_exists( 'gutenberg_starter_theme_setup' ) ) :
 			'flex-width'  => true,
 			'flex-height' => true,
 		) );
+
+		// Add theme support for the new Widget-blocks screen in wp-admin.
+		add_theme_support( 'block-based-widgets' );
+		
+		// Add theme support for custom line-height adjustements.
+		add_theme_support( 'experimental-line-height' );
 	}
 endif;
 add_action( 'after_setup_theme', 'gutenberg_starter_theme_setup' );
