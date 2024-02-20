@@ -11,32 +11,26 @@
 	// Site title and description.
 	wp.customize( 'blogname', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-title a' ).text( to );
-		} );
-	} );
+			document.querySelector( '.site-title a' ).textContent( to );
+		});
+	});
 	wp.customize( 'blogdescription', function( value ) {
 		value.bind( function( to ) {
-			$( '.site-description' ).text( to );
-		} );
-	} );
+			document.querySelector( '.site-description' ).textContent( to );
+		});
+	});
 
 	// Header text color.
 	wp.customize( 'header_textcolor', function( value ) {
 		value.bind( function( to ) {
 			if ( 'blank' === to ) {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'rect(1px, 1px, 1px, 1px)',
-					'position': 'absolute'
-				} );
+				document.querySelector( '.site-title, .site-description' ).style.clip = 'auto';
+        document.querySelector( '.site-title, .site-description' ).style.position = 'absolute'
 			} else {
-				$( '.site-title, .site-description' ).css( {
-					'clip': 'auto',
-					'position': 'relative'
-				} );
-				$( '.site-title a, .site-description' ).css( {
-					'color': to
-				} );
+        document.querySelector( '.site-title, .site-description' ).style.clip = 'auto';
+        document.querySelector( '.site-title, .site-description' ).style.position = 'relative';
+				document.querySelector( '.site-title a, .site-description' ).style.color = to ;
 			}
-		} );
-	} );
-} )( jQuery );
+		});
+	});
+})( jQuery );
